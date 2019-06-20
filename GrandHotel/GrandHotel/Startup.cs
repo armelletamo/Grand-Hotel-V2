@@ -80,7 +80,9 @@ namespace GrandHotel
                 option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
                 option.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
 
-            }).AddJwtBearer(options =>
+            })
+                .AddCookie(cfg => cfg.SlidingExpiration = true)
+                .AddJwtBearer(options =>
             {
                 options.SaveToken = true;
                 options.RequireHttpsMetadata = true;
@@ -94,7 +96,7 @@ namespace GrandHotel
                     ValidateLifetime = true,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:SigningKey"]))
                 };
-            }).AddCookie();
+            });
 
 
             services.AddDistributedMemoryCache();

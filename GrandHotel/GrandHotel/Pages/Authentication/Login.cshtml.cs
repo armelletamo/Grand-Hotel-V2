@@ -50,13 +50,16 @@ namespace GrandHotel.Pages.Authentication
                 var token = new JwtSecurityToken(
                   issuer: _configuration["Jwt:Site"],
                   audience: _configuration["Jwt:Site"],
-                  notBefore: DateTime.Now,
+                  claims: claim,
+                  notBefore: DateTime.Now,                
                   expires: DateTime.Now.AddMinutes(expiryInMinutes*3),
                   signingCredentials: new SigningCredentials(signinKey, SecurityAlgorithms.HmacSha256)
                 );
                 
                 string newtoken = new JwtSecurityTokenHandler().WriteToken(token);
                 var expiration = token.ValidTo;
+                
+                HttpContext.Request.Headers.Add("Authorization", "Bearer " + newtoken);
 
                 string path = (string)HttpContext.Session.GetString("redirectionpath");
                 int prix = (int)HttpContext.Session.GetInt32("prix");

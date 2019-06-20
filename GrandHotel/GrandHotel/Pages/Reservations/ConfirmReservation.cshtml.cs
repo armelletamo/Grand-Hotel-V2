@@ -24,7 +24,7 @@ namespace GrandHotel.Pages.Reservations
         }
 
      
-        public IActionResult OnGet(short chambreNumero, int prixTotal)
+        public IActionResult OnPost(short chambreNumero, int prixTotal)
         {
             try
             {
