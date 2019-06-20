@@ -1,0 +1,50 @@
+﻿@page
+
+@model GrandHotel.Pages.Chambres.ListModel
+@{
+
+}
+<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<form method="post" asp-page="List">
+    <table class="table-bordered">
+        <thead>
+            <tr>
+                <th>Numero</th>
+                <th>Etage </th>
+                <th>Bain</th>
+                <th>Douche</th>
+                <th>Nombre de Lits</th>
+                <th>Prix chambre</th>
+                <th>Prix Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var chambre in Model.Chambre)
+            {
+                <tr>
+                    <td>@chambre.Numero</td>
+                    <td>@chambre.Etage</td>
+                    <td>@chambre.Bain</td>
+                    <td>@chambre.Douche</td>
+                    <td>@chambre.NbLits</td>
+                    <td>@chambre.Prix</td>
+                    <td>@chambre.PrixTotal</td>
+                    <td>
+                        <a class="btn btn-lg"
+                           asp-page="./Detail"
+                           asp-route-chambreId="@chambre.Numero" asp-route-Prix="@chambre.Prix" asp-route-prixTotal="@chambre.PrixTotal" asp-route-nbnuit="@chambre.NbNuit">
+                            <i class="glyphicon glyphicon-zoom-in"></i>
+                        </a>
+                        <button type="submit" asp-route-numchambre="@chambre.Numero" asp-route-prix="@chambre.PrixTotal">
+                            Réserver
+                        </button>
+
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>
+

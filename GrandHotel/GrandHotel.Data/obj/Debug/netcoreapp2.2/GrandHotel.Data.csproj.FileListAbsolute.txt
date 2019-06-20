@@ -1,0 +1,6 @@
+C:\Users\armelle.youmbi\Documents\GrandHotel\GrandHotel.Data\bin\Debug\netcoreapp2.2\GrandHotel.Data.deps.json
+C:\Users\armelle.youmbi\Documents\GrandHotel\GrandHotel.Data\bin\Debug\netcoreapp2.2\GrandHotel.Data.dll
+C:\Users\armelle.youmbi\Documents\GrandHotel\GrandHotel.Data\obj\Debug\netcoreapp2.2\GrandHotel.Data.csproj.CoreCompileInputs.cache
+C:\Users\armelle.youmbi\Documents\GrandHotel\GrandHotel.Data\obj\Debug\netcoreapp2.2\GrandHotel.Data.AssemblyInfoInputs.cache
+C:\Users\armelle.youmbi\Documents\GrandHotel\GrandHotel.Data\obj\Debug\netcoreapp2.2\GrandHotel.Data.AssemblyInfo.cs
+C:\Users\armelle.youmbi\Documents\GrandHotel\GrandHotel.Data\obj\Debug\netcoreapp2.2\GrandHotel.Data.csprojAssemblyReference.cache

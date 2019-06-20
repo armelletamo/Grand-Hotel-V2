@@ -1,0 +1,168 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\armelle.youmbi\\Documents\\Grand-Hotel-Git\\GrandHotel\\GrandHotel.Data\\GrandHotel.Data.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\armelle.youmbi\\Documents\\Grand-Hotel-Git\\GrandHotel\\GrandHotel.Core\\GrandHotel.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\armelle.youmbi\\Documents\\Grand-Hotel-Git\\GrandHotel\\GrandHotel.Core\\GrandHotel.Core.csproj",
+        "projectName": "GrandHotel.Core",
+        "projectPath": "C:\\Users\\armelle.youmbi\\Documents\\Grand-Hotel-Git\\GrandHotel\\GrandHotel.Core\\GrandHotel.Core.csproj",
+        "packagesPath": "C:\\Users\\armelle.youmbi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\armelle.youmbi\\Documents\\Grand-Hotel-Git\\GrandHotel\\GrandHotel.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\armelle.youmbi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.1.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.1.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.11, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[2.1.6, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\armelle.youmbi\\Documents\\Grand-Hotel-Git\\GrandHotel\\GrandHotel.Data\\GrandHotel.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\armelle.youmbi\\Documents\\Grand-Hotel-Git\\GrandHotel\\GrandHotel.Data\\GrandHotel.Data.csproj",
+        "projectName": "GrandHotel.Data",
+        "projectPath": "C:\\Users\\armelle.youmbi\\Documents\\Grand-Hotel-Git\\GrandHotel\\GrandHotel.Data\\GrandHotel.Data.csproj",
+        "packagesPath": "C:\\Users\\armelle.youmbi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\armelle.youmbi\\Documents\\Grand-Hotel-Git\\GrandHotel\\GrandHotel.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\armelle.youmbi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\armelle.youmbi\\Documents\\Grand-Hotel-Git\\GrandHotel\\GrandHotel.Core\\GrandHotel.Core.csproj": {
+                "projectPath": "C:\\Users\\armelle.youmbi\\Documents\\Grand-Hotel-Git\\GrandHotel\\GrandHotel.Core\\GrandHotel.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.1.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.1.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.11, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

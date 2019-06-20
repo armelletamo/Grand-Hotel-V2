@@ -1,0 +1,44 @@
+﻿@page
+<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+@model GrandHotel.Pages.Reservations.CreateReservationModel
+@{
+}
+
+<h2>Create a reservation</h2>
+
+<form method="post" class="form-horizontal col-sm-6">
+
+
+    <div class="form-group ">
+        <label asp-for="Reservation.Jour"></label>
+        <input asp-for="Reservation.Jour" class="form-control" type="date" />
+        <span class="text-danger" asp-validation-for="Reservation.Jour"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Reservation.NombreDeJour"></label>
+        <input asp-for="Reservation.NombreDeJour" class="form-control" type="number" min="1" />
+        <span class="text-danger" asp-validation-for="Reservation.NombreDeJour"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Reservation.NbPersonnes"></label>
+        <input asp-for="Reservation.NbPersonnes" class="form-control" type="number" min="1" />
+        <span class="text-danger" asp-validation-for="Reservation.NbPersonnes"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Reservation.HeureArrivee"></label>
+        <input asp-for="Reservation.HeureArrivee" class="form-control" />
+        <span class="text-danger" asp-validation-for="Reservation.HeureArrivee" type="number" min="1"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Reservation.Travail"></label>
+        @Html.EditorFor(Model => Model.Reservation.Travail)
+       
+        <span class="text-danger" asp-validation-for="Reservation.Travail"></span>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">find</button>
+</form>
+

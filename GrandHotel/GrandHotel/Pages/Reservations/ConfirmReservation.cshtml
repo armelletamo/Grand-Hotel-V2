@@ -1,0 +1,27 @@
+﻿@page
+@model GrandHotel.Pages.Reservations.ConfirmReservationModel
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<h2>Your Reservation has been Successfully saved</h2>
+<h3>Details of your reservation</h3>
+<div>
+    Room number: @Model.reservation.NumChambre
+</div>
+<div>
+    Arriving date: @Model.reservation.Jour
+</div>
+<div>
+    Arriving hour: @Model.reservation.HeureArrivee
+</div>
+<div>
+    Number of persons: @Model.reservation.NbPersonnes
+</div>
+<div>
+    Number of Days: @Model.reservation.NombreDeJour
+</div>
+<div>
+    Number of Days: @Model.prix Euros
+</div>
+
