@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using GrandHotel.Core.Models;
 using GrandHotel.Data.Repository;
 using GrandHotel.Data.Repository.Interface;
+using GrandHotel.MiddleWare;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -125,6 +126,7 @@ namespace GrandHotel
             app.UseStaticFiles();
             app.UseCookiePolicy();
             app.UseSession();
+            app.UseMiddleware<AddTokenMiddleware>();
             app.UseAuthentication();
             app.UseMvc();
         }

@@ -60,7 +60,8 @@ namespace GrandHotel.Pages.Authentication
                 var expiration = token.ValidTo;
                 
                 HttpContext.Request.Headers.Add("Authorization", "Bearer " + newtoken);
-
+                
+                HttpContext.Session.SetString("token", newtoken);
                 string path = (string)HttpContext.Session.GetString("redirectionpath");
                 int prix = (int)HttpContext.Session.GetInt32("prix");
                 short numero = (short)HttpContext.Session.GetInt32("numchambre");
