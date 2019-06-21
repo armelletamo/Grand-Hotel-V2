@@ -88,3 +88,4 @@ C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debu
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\GrandHotel.csproj.CopyComplete
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\GrandHotel.dll
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\GrandHotel.pdb
+C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\Razor\Pages\Client\CreateClient.g.cshtml.cs

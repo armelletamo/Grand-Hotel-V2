@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 namespace GrandHotel.Data.Repository
 {
@@ -36,15 +37,20 @@ namespace GrandHotel.Data.Repository
 
         }
 
-        public void SaveReservation(Reservation reservation, short numero)
+        public void SaveReservation(Reservation reservation,int idclient, short numero)
         {
+
+            var client = db.Client.Where(x => x.Id == idclient).FirstOrDefault();
+            Collection<Reservation> myReservation = new Collection<Reservation>();
             for (int i = 0; i < reservation.NombreDeJour; i++)
-            {
+            {                
                 reservation.NumChambre = numero;
-                reservation.Jour = reservation.Jour.AddDays(i);
-                db.Reservation.Add(reservation);
-                db.SaveChanges();
+                reservation.IdClient = idclient;
+                reservation.Jour = reservation.Jour.AddDays(i);                
+                myReservation.Add(reservation);                       
             }
+            client.Reservation = myReservation;
+            db.SaveChanges();
         }
     }
 }

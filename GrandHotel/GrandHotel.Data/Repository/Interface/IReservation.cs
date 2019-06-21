@@ -9,6 +9,6 @@ namespace GrandHotel.Data.Repository.Interface
    public  interface IReservation
     {
          IEnumerable<Reservation> GetReservation(Reservation reservation );
-        void SaveReservation(Reservation reservation, short numero);
+        void SaveReservation(Reservation reservation, int idclient, short numero);
     }
 }

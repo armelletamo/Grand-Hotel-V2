@@ -23,7 +23,7 @@ namespace GrandHotel.Pages.Reservations
         [BindProperty(SupportsGet = true)]
         public Reservation Reservation { get; set; }
 
-        public CreateReservationModel(IReservation reservation, IChambre chambre, IConfiguration config)
+        public CreateReservationModel(IReservation reservation, IChambre chambre)
         {
             _reservation = reservation;
             _chambre = chambre;           

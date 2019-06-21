@@ -44,6 +44,7 @@ namespace GrandHotel
 
             services.AddTransient<IReservation, ReservationData>();
             services.AddTransient<IChambre, ChambreData>();
+            services.AddTransient<IClient, ClientData>();
 
             services.Configure<CookiePolicyOptions>(options =>
             {

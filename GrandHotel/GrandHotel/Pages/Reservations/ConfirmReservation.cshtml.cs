@@ -16,7 +16,7 @@ namespace GrandHotel.Pages.Reservations
     {
         private readonly IReservation _reservation;
         public int prix;
-        public Reservation reservation { get; set; }
+        public Reservation reservation;
         public Chambre MaChambre;
         public ConfirmReservationModel(IReservation reservation)
         {
@@ -24,13 +24,13 @@ namespace GrandHotel.Pages.Reservations
         }
 
      
-        public IActionResult OnPost(short chambreNumero, int prixTotal)
+        public IActionResult OnGet(int idclient, short chambreNumero, int prixTotal)
         {
             try
             {
                 reservation = HttpContext.Session.GetObjectFromJson<Reservation>("Reservation");
                 prix = prixTotal;
-                _reservation.SaveReservation(reservation, chambreNumero);
+                _reservation.SaveReservation(reservation,idclient, chambreNumero);
             }
             catch(Exception ex)
             {
