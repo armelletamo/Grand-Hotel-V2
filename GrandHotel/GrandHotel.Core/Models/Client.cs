@@ -8,7 +8,7 @@ namespace GrandHotel.Core.Models
         public Client()
         {
             Facture = new HashSet<Facture>();
-            Reservation = new HashSet<Reservation>();
+           Reservation = new List<Reservation>();
             Telephone = new HashSet<Telephone>();
         }
 
@@ -22,7 +22,7 @@ namespace GrandHotel.Core.Models
 
         public Adresse Adresse { get; set; }
         public ICollection<Facture> Facture { get; set; }
-        public ICollection<Reservation> Reservation { get; set; }
+        public List<Reservation> Reservation { get; set; }
         public ICollection<Telephone> Telephone { get; set; }
     }
 }

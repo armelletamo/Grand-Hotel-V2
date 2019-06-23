@@ -69,7 +69,11 @@ namespace GrandHotel.Pages.Authentication
             }
             catch
             {
-                return RedirectToPage("/Reservations/CreateReservation");
+                return RedirectToPage("../Reservations/CreateReservation");
+            }
+            if (path == null)
+            {
+                return RedirectToPage("../Reservations/CreateReservation");
             }
             return RedirectToPage(path, new { idclient=id, chambreNumero = numero, prixTotal = prix });
         }

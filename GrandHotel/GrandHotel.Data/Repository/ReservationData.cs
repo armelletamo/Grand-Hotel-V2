@@ -37,20 +37,27 @@ namespace GrandHotel.Data.Repository
 
         }
 
-        public void SaveReservation(Reservation reservation,int idclient, short numero)
+        public void SaveReservation(Reservation reservation, int idclient, short numero)
         {
 
             var client = db.Client.Where(x => x.Id == idclient).FirstOrDefault();
-            Collection<Reservation> myReservation = new Collection<Reservation>();
+            List<Reservation> myReservation = new List<Reservation>();
+           
             for (int i = 0; i < reservation.NombreDeJour; i++)
-            {                
-                reservation.NumChambre = numero;
-                reservation.IdClient = idclient;
-                reservation.Jour = reservation.Jour.AddDays(i);                
-                myReservation.Add(reservation);                       
+            {
+                Reservation res = new Reservation();
+                res.NumChambre = numero;
+                res.NbPersonnes = reservation.NbPersonnes;
+                res.Travail = reservation.Travail;
+                res.Jour = reservation.Jour.AddDays(i).Date;
+                res.HeureArrivee = reservation.HeureArrivee;
+                client.Reservation.Add(res);
+                db.Entry<Client>(client).State = EntityState.Detached;
+                db.SaveChanges();
             }
-            client.Reservation = myReservation;
-            db.SaveChanges();
+
+            
+
         }
     }
 }

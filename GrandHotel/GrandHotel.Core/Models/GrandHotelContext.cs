@@ -29,6 +29,7 @@ namespace GrandHotel.Core.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
             base.OnModelCreating(modelBuilder);
 
             #region "Seed Data"
@@ -174,7 +175,7 @@ namespace GrandHotel.Core.Models
 
             modelBuilder.Entity<Reservation>(entity =>
             {
-                entity.HasKey(e => new { e.NumChambre, e.Jour });
+                entity.HasKey(e => new { e.NumChambre});
 
                 entity.HasIndex(e => e.IdClient)
                     .HasName("IDX_ReservationClient_FK");

@@ -1,15 +1,11 @@
 ﻿@page
 <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-
 @model GrandHotel.Pages.Reservations.CreateReservationModel
 @{
 }
-
 <h2>Create a reservation</h2>
-
 <form method="post" class="form-horizontal col-sm-6">
-
 
     <div class="form-group ">
         <label asp-for="Reservation.Jour"></label>
@@ -34,11 +30,10 @@
     <div class="form-group">
         <label asp-for="Reservation.Travail"></label>
         @Html.EditorFor(Model => Model.Reservation.Travail)
-       
+
         <span class="text-danger" asp-validation-for="Reservation.Travail"></span>
     </div>
 
-
     <button type="submit" class="btn btn-primary">find</button>
 </form>
-
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

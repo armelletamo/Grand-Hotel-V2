@@ -40,6 +40,7 @@ namespace GrandHotel
         options =>
         {
             options.UseSqlServer(Configuration.GetConnectionString("GrandHotel"));
+            options.EnableSensitiveDataLogging();
         });
 
             services.AddTransient<IReservation, ReservationData>();
