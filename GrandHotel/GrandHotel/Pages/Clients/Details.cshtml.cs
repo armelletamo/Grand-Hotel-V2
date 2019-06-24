@@ -15,6 +15,8 @@ namespace GrandHotel.Pages.Clients
 
         [BindProperty(SupportsGet = true)]
         public Client clt { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public Telephone tel { get; set; }
         public DetailsModel(IClient client)
         {
             _client = client;
@@ -22,6 +24,13 @@ namespace GrandHotel.Pages.Clients
         public IActionResult OnGet(string email)
         {
            clt= _client.GetDetails(email);
+            return Page();
+        }
+
+        public IActionResult OnPost()
+        {
+            clt.Telephone.Add(tel);
+            _client.UpdateClient(clt);
             return Page();
         }
     }

@@ -5,6 +5,7 @@
 <h2> your informations</h2>
 <form method="post" class="form-horizontal col-sm-6">
     <div class="form-group ">
+        <input asp-for="clt.Id" value="@Model.clt.Id" class="form-control" />
         <label asp-for="clt.Civilite"></label>
         <select asp-for="clt.Civilite" value="@Model.clt.Civilite" class="form-control">
             <option value="Mr">Mr</option>
@@ -60,19 +61,21 @@
     @foreach (var tel in Model.clt.Telephone)
     {
         <div class="form-group ">
-            <label asp-for="@tel.Numero"></label>
-            <input asp-for="@tel.Numero" value="@tel.Numero" class="form-control" />
-            <span class="text-danger" asp-validation-for="@tel.Numero"></span>
+            <label asp-for="@Model.tel.Numero"></label>
+            <input asp-for="@Model.tel.Numero" value="@tel.Numero" class="form-control" />
+            <span class="text-danger" asp-validation-for="@Model.tel.Numero"></span>
         </div>
         <div class="form-group ">
-            <label asp-for="@tel.CodeType"></label>
-            <select asp-for="@tel.CodeType" value="@tel.CodeType" class="form-control">
+            <label asp-for="@Model.tel.CodeType"></label>
+            <select asp-for="@Model.tel.CodeType" value="@tel.CodeType" class="form-control">
                 <option value="F">Fixe</option>
                 <option value="P">Portable</option>
             </select>
-            <span class="text-danger" asp-validation-for="@tel.CodeType"></span>
+            <span class="text-danger" asp-validation-for="@Model.tel.CodeType"></span>
         </div>
     }
 
     <button type="submit" class="btn btn-primary">Update</button>
 </form>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

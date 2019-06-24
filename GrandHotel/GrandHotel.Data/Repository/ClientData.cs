@@ -39,5 +39,13 @@ namespace GrandHotel.Data.Repository
                 .Where(x => x.Email == email)
                 .FirstOrDefault();
         }
+
+        public void UpdateClient(Client clt)
+        {
+            var client = db.Client.Where(x => x.Id == clt.Id).Include(x => x.Adresse)
+                 .Include(x => x.Telephone).FirstOrDefault();
+            client = clt;
+            db.SaveChanges();
+        }
     }
 }
