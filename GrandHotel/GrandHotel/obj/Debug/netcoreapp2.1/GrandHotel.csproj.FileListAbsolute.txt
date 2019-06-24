@@ -88,7 +88,6 @@ C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debu
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\GrandHotel.csproj.CopyComplete
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\GrandHotel.dll
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\GrandHotel.pdb
-C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\Razor\Pages\Client\CreateClient.g.cshtml.cs
 C:\Users\Cedric\Documents\Grand-Hotel-V2-master\GrandHotel\GrandHotel\bin\Debug\netcoreapp2.1\GrandHotel.deps.json
 C:\Users\Cedric\Documents\Grand-Hotel-V2-master\GrandHotel\GrandHotel\bin\Debug\netcoreapp2.1\GrandHotel.runtimeconfig.json
 C:\Users\Cedric\Documents\Grand-Hotel-V2-master\GrandHotel\GrandHotel\bin\Debug\netcoreapp2.1\GrandHotel.runtimeconfig.dev.json
@@ -137,3 +136,5 @@ C:\Users\Cedric\Documents\Grand-Hotel-V2-master\GrandHotel\GrandHotel\obj\Debug\
 C:\Users\Cedric\Documents\Grand-Hotel-V2-master\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\GrandHotel.pdb
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\_LoginPartial.g.cshtml.cs
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\Razor\Pages\Authentication\Logout.g.cshtml.cs
+C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\Razor\Pages\Clients\CreateClient.g.cshtml.cs
+C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\Razor\Pages\Clients\Details.g.cshtml.cs

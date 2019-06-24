@@ -5,10 +5,14 @@
 
 @if (User.Claims.Count()!=0)
 {
+    var username = @User.Identities.FirstOrDefault().Claims.FirstOrDefault().Value;
     <form asp-page="/Authentication/Logout"  method="post"  class="navbar-right">
         <ul class="nav navbar-nav navbar-right">
             <li>
-                <a  asp-page="/Index">Welcome @User.Identities.FirstOrDefault().Claims.FirstOrDefault().Value !</a>
+                <a asp-page="/Index">Welcome @username !</a>
+            </li>
+            <li>
+                <a asp-page="/Clients/Details" asp-route-email="@username">My details</a>
             </li>
             <li>
                 <button type="submit" class="btn btn-link navbar-btn navbar-link">Logout</button>

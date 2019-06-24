@@ -41,6 +41,7 @@ namespace GrandHotel.Pages.Authentication
         [HttpPost]
         public async Task<ActionResult> OnPost()
         {
+           
             var user = await _userManager.FindByNameAsync(Login.Username);
             if (user != null && await _userManager.CheckPasswordAsync(user, Login.Password))
             {               

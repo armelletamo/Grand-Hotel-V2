@@ -1,0 +1,78 @@
+﻿@page
+@model GrandHotel.Pages.Clients.DetailsModel
+
+
+<h2> your informations</h2>
+<form method="post" class="form-horizontal col-sm-6">
+    <div class="form-group ">
+        <label asp-for="clt.Civilite"></label>
+        <select asp-for="clt.Civilite" value="@Model.clt.Civilite" class="form-control">
+            <option value="Mr">Mr</option>
+            <option value="Mme">Mme</option>
+        </select>
+        <span class="text-danger" asp-validation-for="clt.Civilite"></span>
+    </div>
+    <div class="form-group ">
+        <label asp-for="clt.Nom"></label>
+        <input asp-for="clt.Nom" value="@Model.clt.Nom" class="form-control" />
+        <span class="text-danger" asp-validation-for="clt.Nom"></span>
+    </div>
+    <div class="form-group ">
+        <label asp-for="clt.Prenom"></label>
+        <input asp-for="clt.Prenom" value="@Model.clt.Prenom" class="form-control" />
+        <span class="text-danger" asp-validation-for="clt.Prenom"></span>
+    </div>
+    <div class="form-group ">
+        <label asp-for="clt.Email"></label>
+        <input asp-for="clt.Email" class="form-control" value="@Model.clt.Email" readonly />
+        <span class="text-danger" asp-validation-for="clt.Email"></span>
+    </div>
+    <div class="form-group ">
+        <label asp-for="clt.CarteFidelite"></label>
+        <input asp-for="clt.CarteFidelite" value="@Model.clt.CarteFidelite" class="form-control" />
+        <span class="text-danger" asp-validation-for="clt.CarteFidelite"></span>
+    </div>
+    <div class="form-group ">
+        <label asp-for="clt.Societe"></label>
+        <input asp-for="clt.Societe" value="@Model.clt.Societe" class="form-control" />
+        <span class="text-danger" asp-validation-for="clt.Societe"></span>
+    </div>
+    <div class="form-group ">
+        <label asp-for="clt.Adresse.Rue"></label>
+        <input asp-for="clt.Adresse.Rue" value="@Model.clt.Adresse.Rue" class="form-control" />
+        <span class="text-danger" asp-validation-for="clt.Adresse.Rue"></span>
+    </div>
+    <div class="form-group ">
+        <label asp-for="clt.Adresse.Complement"></label>
+        <input asp-for="clt.Adresse.Complement" value="@Model.clt.Adresse.Complement" class="form-control" />
+        <span class="text-danger" asp-validation-for="clt.Adresse.Complement"></span>
+    </div>
+    <div class="form-group ">
+        <label asp-for="clt.Adresse.CodePostal"></label>
+        <input asp-for="clt.Adresse.CodePostal" value="@Model.clt.Adresse.CodePostal" class="form-control" />
+        <span class="text-danger" asp-validation-for="clt.Adresse.CodePostal"></span>
+    </div>
+    <div class="form-group ">
+        <label asp-for="clt.Adresse.Ville"></label>
+        <input asp-for="clt.Adresse.Ville" value="@Model.clt.Adresse.Ville" class="form-control" />
+        <span class="text-danger" asp-validation-for="clt.Adresse.Ville"></span>
+    </div>
+    @foreach (var tel in Model.clt.Telephone)
+    {
+        <div class="form-group ">
+            <label asp-for="@tel.Numero"></label>
+            <input asp-for="@tel.Numero" value="@tel.Numero" class="form-control" />
+            <span class="text-danger" asp-validation-for="@tel.Numero"></span>
+        </div>
+        <div class="form-group ">
+            <label asp-for="@tel.CodeType"></label>
+            <select asp-for="@tel.CodeType" value="@tel.CodeType" class="form-control">
+                <option value="F">Fixe</option>
+                <option value="P">Portable</option>
+            </select>
+            <span class="text-danger" asp-validation-for="@tel.CodeType"></span>
+        </div>
+    }
+
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>

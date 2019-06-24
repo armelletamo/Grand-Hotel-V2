@@ -23,7 +23,6 @@ C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel.Core\bin
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel.Core\bin\Debug\netcoreapp2.1\GrandHotel.Core.runtimeconfig.dev.json
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel.Core\bin\Debug\netcoreapp2.1\GrandHotel.Core.dll
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel.Core\bin\Debug\netcoreapp2.1\GrandHotel.Core.pdb
-C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel.Core\obj\Debug\netcoreapp2.1\GrandHotel.Core.csprojAssemblyReference.cache
 C:\Users\Cedric\Documents\Grand-Hotel-V2-master\GrandHotel\GrandHotel.Core\bin\Debug\netcoreapp2.1\GrandHotel.Core.deps.json
 C:\Users\Cedric\Documents\Grand-Hotel-V2-master\GrandHotel\GrandHotel.Core\bin\Debug\netcoreapp2.1\GrandHotel.Core.runtimeconfig.json
 C:\Users\Cedric\Documents\Grand-Hotel-V2-master\GrandHotel\GrandHotel.Core\bin\Debug\netcoreapp2.1\GrandHotel.Core.runtimeconfig.dev.json

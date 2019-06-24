@@ -47,7 +47,7 @@ namespace GrandHotel.Pages.Authentication
                 }
                 var Username = user.UserName;
 
-                return RedirectToPage("../Client/CreateClient", new { email = Username });
+                return RedirectToPage("../Clients/CreateClient", new { email = Username });
 
             }
 
