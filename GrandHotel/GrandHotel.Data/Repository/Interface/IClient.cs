@@ -14,5 +14,7 @@ namespace GrandHotel.Data.Repository.Interface
         Client GetDetails(string email);
 
         void UpdateClient(Client clt);
+
+        Client MyReservation(string email);
     }
 }

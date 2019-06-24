@@ -138,3 +138,5 @@ C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debu
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\Razor\Pages\Authentication\Logout.g.cshtml.cs
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\Razor\Pages\Clients\CreateClient.g.cshtml.cs
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\Razor\Pages\Clients\Details.g.cshtml.cs
+C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\Razor\Pages\Clients\NoReservation.g.cshtml.cs
+C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\Razor\Pages\Clients\Reservations.g.cshtml.cs
