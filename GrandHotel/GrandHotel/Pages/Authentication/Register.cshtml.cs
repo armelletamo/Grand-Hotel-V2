@@ -32,7 +32,7 @@ namespace GrandHotel.Pages.Authentication
         [HttpPost]
         public async Task<ActionResult> OnPost()
         {
-            if (Register != null)
+            if (ModelState.IsValid)
             {
                 var user = new IdentityUser
                 {

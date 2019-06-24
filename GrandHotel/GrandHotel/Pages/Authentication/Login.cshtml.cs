@@ -41,16 +41,18 @@ namespace GrandHotel.Pages.Authentication
         [HttpPost]
         public async Task<ActionResult> OnPost()
         {
-           
-            var user = await _userManager.FindByNameAsync(Login.Username);
-            if (user != null && await _userManager.CheckPasswordAsync(user, Login.Password))
-            {               
-                string newtoken=TokenCreation(user.UserName);
-                HttpContext.Session.SetString("token", newtoken);
-                return  Redirect(user.UserName);
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByNameAsync(Login.Username);
+                if (user != null && await _userManager.CheckPasswordAsync(user, Login.Password))
+                {
+                    string newtoken = TokenCreation(user.UserName);
+                    HttpContext.Session.SetString("token", newtoken);
+                    return Redirect(user.UserName);
+                }
             }
-            
-            return Unauthorized();
+                      
+            return Page();
         }
 
         public new ActionResult Redirect(string username)

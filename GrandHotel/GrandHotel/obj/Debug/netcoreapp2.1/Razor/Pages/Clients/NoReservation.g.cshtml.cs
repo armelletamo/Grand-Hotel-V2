@@ -50,7 +50,7 @@ using GrandHotel;
             WriteLiteral("<h2>You do not have a reservation yet</h2>\r\n\r\n");
             EndContext();
             BeginContext(46, 106, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e81ab9e8e2a64a44b9f52ac58ea1e218", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0f7508912a3246a98affac2b92c15c10", async() => {
                 BeginContext(123, 20, true);
                 WriteLiteral("Create a reservation");
                 EndContext();

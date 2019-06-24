@@ -32,11 +32,15 @@ namespace GrandHotel.Pages.Reservations
 
         public IActionResult OnPost()
         {
-            var MaReservation = _reservation.GetReservation(Reservation).ToList();
-            var ChambreDispo = _chambre.ChambresDisponible(MaReservation, Reservation.NbPersonnes, Reservation.NombreDeJour);
-            HttpContext.Session.SetObjectAsJson("Reservation", Reservation);
-            HttpContext.Session.SetObjectAsJson("ListeDeChambre", ChambreDispo);
-            return RedirectToPage("../Chambres/List");
+            if (ModelState.IsValid)
+            {
+                var MaReservation = _reservation.GetReservation(Reservation).ToList();
+                var ChambreDispo = _chambre.ChambresDisponible(MaReservation, Reservation.NbPersonnes, Reservation.NombreDeJour);
+                HttpContext.Session.SetObjectAsJson("Reservation", Reservation);
+                HttpContext.Session.SetObjectAsJson("ListeDeChambre", ChambreDispo);
+                return RedirectToPage("../Chambres/List");
+            }
+            return Page();
         }
     }
 }

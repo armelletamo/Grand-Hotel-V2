@@ -40,3 +40,5 @@ C:\Users\Cedric\Documents\Grand-Hotel-V2-master\GrandHotel\GrandHotel.Data\obj\D
 C:\Users\Cedric\Documents\Grand-Hotel-V2-master\GrandHotel\GrandHotel.Data\obj\Debug\netcoreapp2.1\GrandHotel.Data.csproj.CopyComplete
 C:\Users\Cedric\Documents\Grand-Hotel-V2-master\GrandHotel\GrandHotel.Data\obj\Debug\netcoreapp2.1\GrandHotel.Data.dll
 C:\Users\Cedric\Documents\Grand-Hotel-V2-master\GrandHotel\GrandHotel.Data\obj\Debug\netcoreapp2.1\GrandHotel.Data.pdb
+C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel.Data\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel.Data\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Mvc.Core.xml
