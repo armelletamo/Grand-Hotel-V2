@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - GrandHotel</title>
@@ -29,14 +30,15 @@
                 <a asp-page="/Index" class="navbar-brand">GrandHotel</a>
             </div>
             <div class="navbar-collapse collapse">
+
                 <ul class="nav navbar-nav">
+
                     <li><a asp-page="/Index">Home</a></li>
                     <li><a asp-page="/About">About</a></li>
                     <li><a asp-page="/Contact">Contact</a></li>
                     <li><a asp-page="/Reservations/CreateReservation">Create a reservation</a></li>
-                    <li><a asp-page="/Authentication/login">Login</a></li>
-                    
                 </ul>
+                <partial name="_LoginPartial" />
             </div>
         </div>
     </nav>

@@ -14,14 +14,13 @@ namespace GrandHotel.Pages
         private readonly IClient _client;
 
         [BindProperty(SupportsGet = true)]
-        public Client client { get; set; }
-
-        [BindProperty(SupportsGet = true)]
         public Adresse adresse { get; set; }
 
         [BindProperty(SupportsGet = true)]
         public Telephone telephone { get; set; }
 
+        [BindProperty(SupportsGet = true)]
+        public Client client { get; set; }
         public CreateClientModel(IClient clt)
         {
             _client = clt;

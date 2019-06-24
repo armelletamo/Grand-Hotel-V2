@@ -47,8 +47,8 @@ namespace GrandHotel.Pages.Authentication
 
                 string newtoken=TokenCreation(user.UserName);
                 HttpContext.Session.SetString("token", newtoken);
-
-               return  Redirect(user.UserName);
+                HttpContext.Session.SetString("username",user.UserName);
+                return  Redirect(user.UserName);
             }
             
             return Unauthorized();
