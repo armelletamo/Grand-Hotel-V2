@@ -9,9 +9,11 @@ namespace GrandHotel.Pages.Authentication
 {
     public class LogoutModel : PageModel
     {
-        public void OnGet()
+        public IActionResult OnPost()
         {
-
+            HttpContext.Session.Remove("token");
+            ViewData["message"] = "User logged out successfully!";
+            return RedirectToPage("../Index");
         }
     }
 }

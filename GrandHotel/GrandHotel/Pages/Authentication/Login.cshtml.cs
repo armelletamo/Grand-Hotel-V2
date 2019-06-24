@@ -43,11 +43,9 @@ namespace GrandHotel.Pages.Authentication
         {
             var user = await _userManager.FindByNameAsync(Login.Username);
             if (user != null && await _userManager.CheckPasswordAsync(user, Login.Password))
-            {
-
+            {               
                 string newtoken=TokenCreation(user.UserName);
                 HttpContext.Session.SetString("token", newtoken);
-                HttpContext.Session.SetString("username",user.UserName);
                 return  Redirect(user.UserName);
             }
             
