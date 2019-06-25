@@ -3,6 +3,15 @@ for details on configuring this project to bundle and minify static web assets. 
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url('../images/loft_suite_with_terrace_at_the_times_square_edition.16.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+}
+.logo-image {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 100px;
+    margin-top: -150px;
 }
 
 /* Wrapping element */

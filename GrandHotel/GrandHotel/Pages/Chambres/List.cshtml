@@ -5,43 +5,47 @@
 }
 <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-<form method="post" asp-page="List">
-    <table class="table-bordered">
-        <thead>
-            <tr>
-                <th>Room number</th>
-                <th>Level </th>
-                <th>Bath</th>
-                <th>Shower</th>
-                <th>Number of beds</th>
-                <th>Unit Price</th>
-                <th>Total Price</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var chambre in Model.Chambre)
-            {
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<body>
+    <form method="post" asp-page="List">
+        <table class="table table-hover">
+            <thead>
                 <tr>
-                    <td>@chambre.Numero</td>
-                    <td>@chambre.Etage</td>
-                    <td>@chambre.Bain</td>
-                    <td>@chambre.Douche</td>
-                    <td>@chambre.NbLits</td>
-                    <td>@chambre.Prix</td>
-                    <td>@chambre.PrixTotal</td>
-                    <td>
-                        <a class="btn btn-lg"
-                           asp-page="./Detail"
-                           asp-route-chambreId="@chambre.Numero" asp-route-Prix="@chambre.Prix" asp-route-prixTotal="@chambre.PrixTotal" asp-route-nbnuit="@chambre.NbNuit">
-                            <i class="glyphicon glyphicon-zoom-in"></i>
-                        </a>
-                        <button type="submit" asp-route-numchambre="@chambre.Numero" asp-route-prix="@chambre.PrixTotal">
-                            Réserver
-                        </button>
-                    </td>
+                    <th>Room number</th>
+                    <th>Level </th>
+                    <th>Bath</th>
+                    <th>Shower</th>
+                    <th>Number of beds</th>
+                    <th>Unit Price</th>
+                    <th>Total Price</th>
                 </tr>
-            }
-        </tbody>
-    </table>
-</form>
+            </thead>
+            <tbody>
+                @foreach (var chambre in Model.Chambre)
+                {
+                    <tr>
+                        <td>@chambre.Numero</td>
+                        <td>@chambre.Etage</td>
+                        <td>@chambre.Bain</td>
+                        <td>@chambre.Douche</td>
+                        <td>@chambre.NbLits</td>
+                        <td>@chambre.Prix</td>
+                        <td>@chambre.PrixTotal</td>
+                        <td>
+                            <a class="btn btn-lg"
+                               asp-page="./Detail"
+                               asp-route-chambreId="@chambre.Numero" asp-route-Prix="@chambre.Prix" asp-route-prixTotal="@chambre.PrixTotal" asp-route-nbnuit="@chambre.NbNuit">
+                                <i class="glyphicon glyphicon-zoom-in"></i>
+                            </a>
+                            <button type="submit" asp-route-numchambre="@chambre.Numero" asp-route-prix="@chambre.PrixTotal">
+                                Réserver
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </form>
+</body>
+
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

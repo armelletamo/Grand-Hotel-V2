@@ -2,25 +2,29 @@
 @model GrandHotel.Pages.Authentication.LoginModel
 <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-<h2>Login</h2>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-<form method="post" class="form-horizontal col-sm-6">
-    <div asp-validation-summary="None">
-        <div class="form-group">
-            <label asp-for="Login.Username"></label>
-            <input asp-for="Login.Username" class="form-control" />
-            <span class="text-danger" asp-validation-for="Login.Username"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="Login.Password"></label>
-            <input asp-for="Login.Password" class="form-control" />
-            <span class="text-danger" asp-validation-for="Login.Password"></span>
+<div class="container">
+    <h2>Login</h2>
+    <form method="post" class="form-horizontal col-sm-6">
+        <div asp-validation-summary="None">
+            <div class="form-group">
+                <label asp-for="Login.Username"></label>
+                <input asp-for="Login.Username" class="form-control" />
+                <span class="text-danger" asp-validation-for="Login.Username"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Login.Password"></label>
+                <input asp-for="Login.Password" class="form-control" />
+                <span class="text-danger" asp-validation-for="Login.Password"></span>
+            </div>
+
+            <div class="container">
+                <button type="submit" asp-route-redirectionpath="@ViewData[" redirectionpath"]" asp-route-numero="@ViewData[" numchambre"]" asp-route-prix="@ViewData[" prix"]" class="btn btn-primary">Login</button>
+            </div>
         </div>
 
-        <div class="container">
-            <button type="submit" asp-route-redirectionpath="@ViewData["redirectionpath"]" asp-route-numero="@ViewData["numchambre"]" asp-route-prix="@ViewData["prix"]" class="btn btn-primary">Login</button>
-        </div>
-    </div>
-</form>
+    </form>
+</div>
 @Html.Partial("LoginPartial")
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

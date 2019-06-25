@@ -1,19 +1,19 @@
 ﻿@page
 @model GrandHotel.Pages.Clients.ReservationsModel
 
-
+<br /><br /><br /><br />
 <h2>My Reservations</h2>
-<form  class="form-horizontal col-sm-6">
-    
-    <table class="table-bordered">
+<form class="form-horizontal col-sm-6">
+
+    <table class="table table-hover">
         <thead>
             <tr>
                 <th>Room number</th>
                 <th>Date </th>
                 <th>Number of persons</th>
-                <th>Arriving time</th>               
+                <th>Arriving time</th>
                 <th>For Work?</th>
-                
+
             </tr>
         </thead>
         <tbody>
@@ -24,7 +24,7 @@
                     <td>@res.Jour.Date</td>
                     <td>@res.NbPersonnes</td>
                     <td>@res.HeureArrivee</td>
-                    <td>@res.Travail</td>                                      
+                    <td>@res.Travail</td>
                 </tr>
             }
         </tbody>
