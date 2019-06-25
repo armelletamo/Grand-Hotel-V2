@@ -53,12 +53,12 @@ using GrandHotel;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(2, 171, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0294e9b050f7416dba8ef3fea6e797e5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0387c38fb1d44882b7f294743575703c", async() => {
                 BeginContext(21, 60, true);
                 WriteLiteral("\r\n    <div style=\"margin-top:3%;margin-left:70%;\">\r\n        ");
                 EndContext();
                 BeginContext(81, 71, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cfcb0ad64b4c44379fb0cf1a627f1f31", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2d89aee604cc475ca7874fbac849b26c", async() => {
                     BeginContext(135, 8, true);
                     WriteLiteral("Register");
                     EndContext();

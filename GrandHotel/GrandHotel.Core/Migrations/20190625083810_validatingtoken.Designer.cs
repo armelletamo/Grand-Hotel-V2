@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GrandHotel.Core.Migrations
 {
     [DbContext(typeof(GrandHotelContext))]
-    [Migration("20190617130308_roletable")]
-    partial class roletable
+    [Migration("20190625083810_validatingtoken")]
+    partial class validatingtoken
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -171,6 +171,21 @@ namespace GrandHotel.Core.Migrations
                     b.ToTable("LigneFacture");
                 });
 
+            modelBuilder.Entity("GrandHotel.Core.Models.LogoutToken", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Token");
+
+                    b.Property<string>("Username");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LogoutToken");
+                });
+
             modelBuilder.Entity("GrandHotel.Core.Models.ModePaiement", b =>
                 {
                     b.Property<string>("Code")
@@ -190,20 +205,20 @@ namespace GrandHotel.Core.Migrations
                 {
                     b.Property<short>("NumChambre");
 
-                    b.Property<DateTime>("Jour")
-                        .HasColumnType("date");
-
                     b.Property<byte>("HeureArrivee")
                         .ValueGeneratedOnAdd()
                         .HasDefaultValueSql("((17))");
 
                     b.Property<int>("IdClient");
 
+                    b.Property<DateTime>("Jour")
+                        .HasColumnType("date");
+
                     b.Property<byte>("NbPersonnes");
 
                     b.Property<bool?>("Travail");
 
-                    b.HasKey("NumChambre", "Jour");
+                    b.HasKey("NumChambre");
 
                     b.HasIndex("IdClient")
                         .HasName("IDX_ReservationClient_FK");

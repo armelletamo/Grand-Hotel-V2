@@ -24,7 +24,7 @@ namespace GrandHotel.Core.Models
         public virtual DbSet<Tarif> Tarif { get; set; }
         public virtual DbSet<TarifChambre> TarifChambre { get; set; }
         public virtual DbSet<Telephone> Telephone { get; set; }
-
+        public virtual DbSet<LogoutToken> LogoutToken { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

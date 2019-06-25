@@ -23,15 +23,17 @@ namespace GrandHotel.Pages.Authentication
         private readonly UserManager<IdentityUser> _userManager;
         private readonly IConfiguration _configuration;
         private readonly IClient _client;
-       
+        private readonly ILogin _log;
+
 
         [BindProperty]
         public LoginViewModel Login { get; set; }
-        public LoginModel(UserManager<IdentityUser> userManager, IConfiguration configuration, IClient client)
+        public LoginModel(UserManager<IdentityUser> userManager, IConfiguration configuration, IClient client, ILogin log)
         {
             _userManager = userManager;
             _configuration = configuration;
             _client = client;
+            _log = log;
         }
         public IActionResult OnGet()
         {
@@ -47,6 +49,10 @@ namespace GrandHotel.Pages.Authentication
                 if (user != null && await _userManager.CheckPasswordAsync(user, Login.Password))
                 {
                     string newtoken = TokenCreation(user.UserName);
+                    if (_log.CheckToken(newtoken))
+                    {
+                        return Page();
+                    }
                     HttpContext.Session.SetString("token", newtoken);
                     return Redirect(user.UserName);
                 }
