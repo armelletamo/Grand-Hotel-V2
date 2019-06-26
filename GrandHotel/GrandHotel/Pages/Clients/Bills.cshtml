@@ -1,8 +1,50 @@
 ﻿@page
 @model GrandHotel.Pages.Clients.BillsModel
-@{
-    ViewData["Title"] = "Bills";
-}
 
+
+<br /><br /><br /><br />
 <h2>Bills</h2>
-
+<form method="post" class="form-horizontal col-sm-6">
+    <div asp-validation-summary="None" class="container">
+        <div class="form-group ">
+            <label asp-for="facture.DateFacture"></label>
+            <input asp-for="facture.DateFacture" value="@Model.res.Jour.Date" class="form-control" readonly />
+            <span class="text-danger" asp-validation-for="facture.DateFacture"></span>
+        </div>
+        <div class="form-group ">
+            <label asp-for="facture.DatePaiement"></label>
+            <input asp-for="facture.DatePaiement" value="@DateTime.Now.Date" class="form-control" readonly />
+            <span class="text-danger" asp-validation-for="facture.DatePaiement"></span>
+        </div>
+        <div class="form-group ">
+            <label asp-for="facture.CodeModePaiement"></label>
+            <select asp-for="facture.CodeModePaiement" class="form-control">
+                <option value="CHQ">Check</option>
+                <option value="ESP">Cash</option>
+                <option value="CB">Bank Card</option>
+            </select>
+            <span class="text-danger" asp-validation-for="facture.DatePaiement"></span>
+        </div>
+        <div class="form-group ">
+            <label asp-for="ligneFacture.Quantite"></label>
+            <input asp-for="ligneFacture.Quantite" value="@Model.res.NombreDeJour/" class="form-control" readonly />
+            <span class="text-danger" asp-validation-for="ligneFacture.Quantite"></span>
+        </div>
+        <div class="form-group ">
+            <label asp-for="ligneFacture.MontantHt"></label>
+            <input asp-for="ligneFacture.MontantHt" value="@Model.prixtotal/@Model.res.NombreDeJour" class="form-control" readonly />
+            <span class="text-danger" asp-validation-for="ligneFacture.MontantHt"></span>
+        </div>
+        <div class="form-group ">
+            <label asp-for="ligneFacture.TauxTva"></label>
+            <input asp-for="ligneFacture.TauxTva" value="20" class="form-control" readonly />
+            <span class="text-danger" asp-validation-for="ligneFacture.TauxTva"></span>
+        </div>
+        <div class="form-group ">
+            <label asp-for="ligneFacture.TauxReduction"></label>
+            <input asp-for="ligneFacture.TauxReduction" value="1" class="form-control" readonly />
+            <span class="text-danger" asp-validation-for="ligneFacture.TauxReduction"></span>
+        </div>
+        <button type="submit" class="btn btn-primary form-control">Pay</button>
+    </div>
+</form>

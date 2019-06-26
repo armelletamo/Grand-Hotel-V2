@@ -24,11 +24,9 @@ namespace GrandHotel.Data.Repository
 
         }
 
-        public int GetClientId(string username)
-        {
-            int idclient = 0;
-            idclient = db.Client.Where(x => x.Email == username).Select(x => x.Id).FirstOrDefault();
-            return idclient;
+        public Client GetClient(string username)
+        {           
+            return db.Client.Where(x => x.Email == username).FirstOrDefault();            
         }
 
         public Client GetDetails(string email)

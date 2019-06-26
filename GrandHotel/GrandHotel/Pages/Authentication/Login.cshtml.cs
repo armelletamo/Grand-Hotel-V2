@@ -64,25 +64,21 @@ namespace GrandHotel.Pages.Authentication
         public new ActionResult Redirect(string username)
         {
             string path = "";
-            int prix;
-            short numero;
-            int id = 0;
+            
             try
             {
-                path = (string)HttpContext.Session.GetString("redirectionpath");
-                prix = (int)HttpContext.Session.GetInt32("prix");
-                numero = (short)HttpContext.Session.GetInt32("numchambre");
-                id = _client.GetClientId(username);
+                path = (string)HttpContext.Session.GetString("redirectionpath");               
             }
             catch
             {
                 return RedirectToPage("../Reservations/CreateReservation");
             }
-            if (path == null)
+            if (path != null && path.Contains("Reservationsn"))
             {
-                return RedirectToPage("../Reservations/CreateReservation");
+              
+                return RedirectToPage("../Bills", new { email = username } );
             }
-            return RedirectToPage(path, new { idclient=id, chambreNumero = numero, prixTotal = prix });
+            return RedirectToPage("../Reservations/CreateReservation");
         }
 
         public string TokenCreation(string username)

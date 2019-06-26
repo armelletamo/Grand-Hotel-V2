@@ -9,7 +9,7 @@ namespace GrandHotel.Data.Repository.Interface
     {
         void CreateClient(Client client);
 
-        int GetClientId(string username);
+        Client GetClient(string username);
 
         Client GetDetails(string email);
 

@@ -15,17 +15,19 @@ namespace GrandHotel.Pages.Reservations
     public class ConfirmReservationModel : PageModel
     {
         private readonly IReservation _reservation;
+        private readonly IFacture _facture;
         public int prix;
         public short numero;
         public Reservation reservation;
         public Chambre MaChambre;
-        public ConfirmReservationModel(IReservation reservation)
+        public ConfirmReservationModel(IReservation reservation, IFacture facture)
         {
             _reservation = reservation;
+            _facture = facture;
         }
 
      
-        public IActionResult OnGet(int idclient, short chambreNumero, int prixTotal)
+        public IActionResult OnGet([FromBody]int idclient, [FromBody]short chambreNumero, [FromBody]int prixTotal, [FromBody]Facture facturereservation)
         {
             try
             {
@@ -33,6 +35,7 @@ namespace GrandHotel.Pages.Reservations
                 prix = prixTotal;
                 numero = chambreNumero;
                 _reservation.SaveReservation(reservation,idclient, chambreNumero);
+                _facture.SaveBills(idclient, facturereservation);
             }
             catch(Exception ex)
             {
