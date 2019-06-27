@@ -45,7 +45,8 @@ namespace GrandHotel.Data.Repository
                 ch.NbNuit = nbnuit;
                 var codetarif = ch.TarifChambre.Where(x => x.CodeTarif.Contains("CHB") && x.CodeTarif.Contains("2018"));
                 ch.Prix = (int)decimal.Truncate(ch.TarifChambre.Select(x => x.CodeTarifNavigation.Prix).FirstOrDefault());
-                ch.PrixTotal = (int)decimal.Truncate(ch.Prix * ch.NbNuit);
+                decimal d = Math.Ceiling(ch.Prix * ch.NbNuit * 1.188m);
+                ch.PrixTotal = (int)decimal.Truncate(d);
                 Chambredispo.Add(ch);
             }
             _chambre = Chambredispo;

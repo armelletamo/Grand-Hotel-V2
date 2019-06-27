@@ -14,37 +14,53 @@ namespace GrandHotel.Pages.Clients
     public class BillsModel : PageModel
     {
         private readonly IClient _client;
+        private readonly IFacture _facture;
+
         [BindProperty(SupportsGet = true)]
         public Facture facture { get; set; }
 
         [BindProperty(SupportsGet = true)]
         public LigneFacture ligneFacture { get; set; }
         public Reservation res { get; set; }
-        public int prixtotal;
 
-        public BillsModel(IClient client)
+        public IEnumerable<Facture> ListOfFacture;
+
+        public int prixtotal;
+        public int prixht;
+
+        public BillsModel(IClient client, IFacture newfacture)
         {
             _client = client;
-            prixtotal = (int)HttpContext.Session.GetInt32("prix");
+            facture = new Facture();
+            _facture = newfacture;
         }
 
-        public IActionResult OnGet([FromBody] string username)
+        public IActionResult OnGet(string email)
         {
-            res = HttpContext.Session.GetObjectFromJson<Reservation>("Reservation");            
-            ViewData["email"] = username;
+            prixtotal = (int)HttpContext.Session.GetInt32("prix");
+            prixht = (int)Math.Ceiling(prixtotal / 1.188);
+            res = HttpContext.Session.GetObjectFromJson<Reservation>("Reservation");
+            facture.DateFacture = res.Jour.Date;
+            facture.DatePaiement = DateTime.Now.Date;
+            ligneFacture.Quantite = (short)res.NombreDeJour;
+            ligneFacture.MontantHt = prixht / ligneFacture.Quantite;
+            ViewData["email"] = email;
             return Page();
         }
-        public IActionResult OnPost([FromBody] string username)
+        public IActionResult OnPost(string username)
         {
             if (ModelState.IsValid)
             {
+                prixtotal = (int)HttpContext.Session.GetInt32("prix");
                 int id = _client.GetClient(username).Id;
                 facture.LigneFacture.Add(ligneFacture);
-                short numero= (short)HttpContext.Session.GetInt32("numchambre");
-                return RedirectToPage("../Reservations/ConfirmReservation", new { idclient = id, chambreNumero = numero, prixTotal = prixtotal, facturereservation = facture }) ;
+                short numero = (short)HttpContext.Session.GetInt32("numchambre");
+                HttpContext.Session.SetObjectAsJson("Facture", facture);
+                return RedirectToPage("../Reservations/ConfirmReservation", new { idclient = id, chambreNumero = numero, prixTotal = prixtotal });
             }
-           
+
             return Page();
         }
+
     }
 }

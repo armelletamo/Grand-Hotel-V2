@@ -7,12 +7,17 @@ using System.Text;
 
 namespace GrandHotel.Data.Repository
 {
-    class FactureData: IFacture
+    public class FactureData: IFacture
     {
         private readonly GrandHotelContext db;
         public FactureData(GrandHotelContext db)
         {
             this.db = db;
+        }
+
+        public IEnumerable<Facture> GetBills(int id)
+        {
+          return  db.Facture.Where(x => x.IdClient == id).ToList();
         }
 
         public void SaveBills(int idclient, Facture facture)
@@ -21,5 +26,14 @@ namespace GrandHotel.Data.Repository
             client.Facture.Add(facture);
             db.SaveChanges();
         }
+
+        public LigneFacture GetBillsDetail(int id)
+        {
+            var detail = db.LigneFacture.Where(x=>x.IdFacture==id).FirstOrDefault();
+            return detail;
+            
+        }
+
+
     }
 }

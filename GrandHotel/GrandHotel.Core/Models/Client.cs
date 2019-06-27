@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace GrandHotel.Core.Models
 {
@@ -13,11 +15,22 @@ namespace GrandHotel.Core.Models
         }
 
         public int Id { get; set; }
+        [BindRequired]
+        [DisplayName("Civility")]
         public string Civilite { get; set; }
+        [DisplayName("Last Name")]
+        [BindRequired]
         public string Nom { get; set; }
+        [DisplayName("First Name")]
+        [BindRequired]
         public string Prenom { get; set; }
+        [BindRequired]
         public string Email { get; set; }
+        [DisplayName("Fidelity Card")]
+        [BindRequired]
         public bool CarteFidelite { get; set; }
+        [DisplayName("Society")]
+        [BindRequired]
         public string Societe { get; set; }
 
         public Adresse Adresse { get; set; }

@@ -8,6 +8,7 @@ namespace GrandHotel.Core.Models
 {
     public partial class Reservation
     {
+        [Key]
         public short NumChambre { get; set; }
 
         [Display(Name = "Arriving Day")]
@@ -16,6 +17,8 @@ namespace GrandHotel.Core.Models
         [BindRequired]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
+        [CustomDateRange(ErrorMessage ="The Date can not be lower than today.")]
+        [ForeignKey("Calendrier")]
         public DateTime Jour { get; set; }
 
         public int IdClient { get; set; }
@@ -41,5 +44,11 @@ namespace GrandHotel.Core.Models
         public Client IdClientNavigation { get; set; }
         public Calendrier JourNavigation { get; set; }
         public Chambre NumChambreNavigation { get; set; }
+    }
+
+    public class CustomDateRangeAttribute : RangeAttribute
+    {
+        public CustomDateRangeAttribute() : base(typeof(DateTime), DateTime.Now.AddDays(-1).ToString(), DateTime.Now.AddYears(20).ToString())
+        { }
     }
 }

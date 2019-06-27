@@ -1,0 +1,39 @@
+﻿@page
+@model GrandHotel.Pages.Clients.ClientListOfBillsModel
+
+<h2>List of Bills</h2>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<body>
+    <form method="get" asp-page="List">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Invoice Date</th>
+                    <th>Payment Date </th>
+                    <th>Payment Method</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var facture in Model.ListOfFacture)
+                {
+                    <tr>
+                        <td>@facture.DateFacture</td>
+                        <td>@facture.DatePaiement</td>
+                        <td>@facture.CodeModePaiement</td>
+
+                        <td>
+                            <a class="btn btn-lg"
+                               asp-page="./DetailOfBill"
+                               asp-route-Id="@facture.Id">
+                                <i class="glyphicon glyphicon-zoom-in"></i>
+                            </a>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </form>
+</body>
+

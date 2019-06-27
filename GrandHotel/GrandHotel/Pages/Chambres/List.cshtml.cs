@@ -35,7 +35,7 @@ namespace GrandHotel.Pages.Chambres
             var done = HttpContext.User.Identity.IsAuthenticated;
             if (done)
             {
-                return RedirectToPage("../Reservations/ConfirmReservation", new { chambreNumero=numchambre, prixTotal=prix });
+                return RedirectToPage("../Clients/Bills");
             }
             ViewData["redirectionpath"] = "../Reservations/ConfirmReservation";
             ViewData["numchambre"] = numchambre;

@@ -27,7 +27,7 @@ namespace GrandHotel.Pages.Reservations
         }
 
      
-        public IActionResult OnGet([FromBody]int idclient, [FromBody]short chambreNumero, [FromBody]int prixTotal, [FromBody]Facture facturereservation)
+        public IActionResult OnGet(int idclient, short chambreNumero, int prixTotal)
         {
             try
             {
@@ -35,7 +35,9 @@ namespace GrandHotel.Pages.Reservations
                 prix = prixTotal;
                 numero = chambreNumero;
                 _reservation.SaveReservation(reservation,idclient, chambreNumero);
-                _facture.SaveBills(idclient, facturereservation);
+                var factuereservation= HttpContext.Session.GetObjectFromJson<Facture>("Facture");
+                _facture.SaveBills(idclient, factuereservation);
+                HttpContext.Session.Remove("Reservation");
             }
             catch(Exception ex)
             {

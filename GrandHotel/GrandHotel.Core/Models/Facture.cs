@@ -23,7 +23,7 @@ namespace GrandHotel.Core.Models
         [BindRequired]
         [DisplayName("Pay Mode")]
         public string CodeModePaiement { get; set; }
-
+       
         public ModePaiement CodeModePaiementNavigation { get; set; }
         public Client IdClientNavigation { get; set; }
         public ICollection<LigneFacture> LigneFacture { get; set; }

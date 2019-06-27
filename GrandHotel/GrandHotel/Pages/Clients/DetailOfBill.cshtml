@@ -1,0 +1,20 @@
+﻿@page
+@model GrandHotel.Pages.Clients.DetailOfBillModel
+
+<h2>Detail of Bills @Model.ligneFacture.IdFacture</h2>
+<br /><br /><br /><br />
+<div>
+    Number of days: @Model.ligneFacture.Quantite
+</div>
+<div>
+    Pre-Tax Amount: @Model.ligneFacture.MontantHt euros
+</div>
+<div>
+    VAT Rate: @Model.ligneFacture.TauxReduction %
+</div>
+<div>
+    Reduction Rate: @Model.ligneFacture.TauxTva %
+</div>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
