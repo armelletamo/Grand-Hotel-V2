@@ -4,11 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using GrandHotel.Core.Models;
 using GrandHotel.Data.Repository.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace GrandHotel.Pages.Clients
 {
+    [Authorize]
     public class ClientListOfBillsModel : PageModel
     {
         private readonly IClient _client;

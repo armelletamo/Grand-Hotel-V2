@@ -38,6 +38,7 @@ namespace GrandHotel.Core.Models
         [Display(Name = "Arriving Time")]
         public byte HeureArrivee { get; set; }
 
+        [BindRequired]
         [Display(Name = "For Works?")]
         public bool? Travail { get; set; }
 

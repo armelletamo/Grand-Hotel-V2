@@ -20,11 +20,12 @@ namespace GrandHotel.Data.Repository
           return  db.Facture.Where(x => x.IdClient == id).ToList();
         }
 
-        public void SaveBills(int idclient, Facture facture)
+        public int SaveBills(int idclient, Facture facture)
         {
            var client= db.Client.Where(x => x.Id == idclient).FirstOrDefault();
             client.Facture.Add(facture);
             db.SaveChanges();
+            return db.Facture.Where(x => x.IdClient == idclient).Select(x => x.Id).LastOrDefault();
         }
 
         public LigneFacture GetBillsDetail(int id)
@@ -34,6 +35,13 @@ namespace GrandHotel.Data.Repository
             
         }
 
-
+        public void SaveLigneFacture(int id, LigneFacture ligne)
+        {
+            int numligne = db.LigneFacture.Where(x => x.IdFacture == id).Count();
+            ligne.NumLigne = numligne+1;
+            var fact = db.Facture.Where(x => x.Id == id).FirstOrDefault();
+            fact.LigneFacture.Add(ligne);
+            db.SaveChanges();
+        }
     }
 }

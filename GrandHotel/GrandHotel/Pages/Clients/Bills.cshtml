@@ -36,16 +36,17 @@
         </div>
         <div class="form-group">
             <label asp-for="ligneFacture.TauxTva"></label>
-            <input asp-for="ligneFacture.TauxTva" value="20" class="form-control" readonly />
+            <input asp-for="ligneFacture.TauxTva" value="0,2" class="form-control" readonly />
             <span class="text-danger" asp-validation-for="ligneFacture.TauxTva"></span>
         </div>
         <div class="form-group">
             <label asp-for="ligneFacture.TauxReduction"></label>
-            <input asp-for="ligneFacture.TauxReduction" value="1" class="form-control" readonly />
+            <input asp-for="ligneFacture.TauxReduction" value="0,1" class="form-control" readonly />
             <span class="text-danger" asp-validation-for="ligneFacture.TauxReduction"></span>
         </div>
-        
-            <button type="submit" asp-route-username="@ViewData["email"]" class="btn btn-primary">Pay</button>
        
+        <button type="submit" name="save" asp-route-username="@ViewData["email"]" class="btn btn-primary" value="Save">Pay</button>
+        <button type="submit" class="btn btn-primary" value="Cancel" name="cancel">Cancel the reservation</button>
+
     </div>
 </form>

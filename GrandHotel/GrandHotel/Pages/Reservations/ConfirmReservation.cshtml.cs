@@ -26,7 +26,7 @@ namespace GrandHotel.Pages.Reservations
             _facture = facture;
         }
 
-     
+
         public IActionResult OnGet(int idclient, short chambreNumero, int prixTotal)
         {
             try
@@ -34,12 +34,18 @@ namespace GrandHotel.Pages.Reservations
                 reservation = HttpContext.Session.GetObjectFromJson<Reservation>("Reservation");
                 prix = prixTotal;
                 numero = chambreNumero;
-                _reservation.SaveReservation(reservation,idclient, chambreNumero);
-                var factuereservation= HttpContext.Session.GetObjectFromJson<Facture>("Facture");
-                _facture.SaveBills(idclient, factuereservation);
+
+                _reservation.SaveReservation(reservation, idclient, chambreNumero);
+                var factuereservation = HttpContext.Session.GetObjectFromJson<Facture>("Facture");
+                int factureid = _facture.SaveBills(idclient, factuereservation);
+                var LigneFacture = HttpContext.Session.GetObjectFromJson<LigneFacture>("LigneFacture");
+                _facture.SaveLigneFacture(factureid, LigneFacture);
+
                 HttpContext.Session.Remove("Reservation");
+                HttpContext.Session.Remove("Facture");
+                HttpContext.Session.Remove("LigneFacture");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return RedirectToPage("./UnableToSave");
             }

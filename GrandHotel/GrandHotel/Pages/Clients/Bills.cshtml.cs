@@ -5,12 +5,14 @@ using System.Threading.Tasks;
 using GrandHotel.Cookies;
 using GrandHotel.Core.Models;
 using GrandHotel.Data.Repository.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace GrandHotel.Pages.Clients
 {
+    [Authorize]
     public class BillsModel : PageModel
     {
         private readonly IClient _client;
@@ -24,6 +26,14 @@ namespace GrandHotel.Pages.Clients
         public Reservation res { get; set; }
 
         public IEnumerable<Facture> ListOfFacture;
+        
+        [BindProperty]
+        public string save { get; set; }
+        [BindProperty]
+        public string cancel { get; set; }
+
+        [BindProperty(SupportsGet = true) ]
+        public string username { get; set; }
 
         public int prixtotal;
         public int prixht;
@@ -51,16 +61,28 @@ namespace GrandHotel.Pages.Clients
         {
             if (ModelState.IsValid)
             {
-                prixtotal = (int)HttpContext.Session.GetInt32("prix");
-                int id = _client.GetClient(username).Id;
-                facture.LigneFacture.Add(ligneFacture);
-                short numero = (short)HttpContext.Session.GetInt32("numchambre");
-                HttpContext.Session.SetObjectAsJson("Facture", facture);
-                return RedirectToPage("../Reservations/ConfirmReservation", new { idclient = id, chambreNumero = numero, prixTotal = prixtotal });
+                if (!string.IsNullOrEmpty(save))
+                {
+                    prixtotal = (int)HttpContext.Session.GetInt32("prix");
+                    int id = _client.GetClient(username).Id;
+                    short numero = (short)HttpContext.Session.GetInt32("numchambre");
+                    HttpContext.Session.SetObjectAsJson("Facture", facture);
+                    HttpContext.Session.SetObjectAsJson("LigneFacture", ligneFacture);
+                    return RedirectToPage("../Reservations/ConfirmReservation", new { idclient = id, chambreNumero = numero, prixTotal = prixtotal });
+                }
+                else if(!string.IsNullOrEmpty(cancel))
+                {
+                    HttpContext.Session.Remove("Reservation");
+                    HttpContext.Session.Remove("ListeDeChambre");
+                    return RedirectToPage("../Reservations/CreateReservation");
+                }
+               
             }
 
             return Page();
         }
+
+       
 
     }
 }

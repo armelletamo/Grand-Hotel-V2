@@ -50,7 +50,7 @@ using GrandHotel;
             WriteLiteral("\r\n<br /><br /><br /><br />\r\n<h2>My Reservations</h2>\r\n");
             EndContext();
             BeginContext(112, 763, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4642df978512449eb1c63bf06d4b47d4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "34c7632dbc01403292834b528c9b152d", async() => {
                 BeginContext(151, 324, true);
                 WriteLiteral(@"
 
