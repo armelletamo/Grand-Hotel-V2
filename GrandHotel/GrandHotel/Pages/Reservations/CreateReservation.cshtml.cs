@@ -34,6 +34,7 @@ namespace GrandHotel.Pages.Reservations
         {
             if (ModelState.IsValid)
             {
+                HttpContext.Session.Remove("Reservation");
                 var MaReservation = _reservation.GetReservation(Reservation).ToList();
                 var ChambreDispo = _chambre.ChambresDisponible(MaReservation, Reservation.NbPersonnes, Reservation.NombreDeJour);
                 HttpContext.Session.SetObjectAsJson("Reservation", Reservation);

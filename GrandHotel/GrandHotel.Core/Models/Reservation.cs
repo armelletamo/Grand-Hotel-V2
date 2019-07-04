@@ -9,6 +9,7 @@ namespace GrandHotel.Core.Models
     public partial class Reservation
     {
         [Key]
+        public int Id { get; set; }
         public short NumChambre { get; set; }
 
         [Display(Name = "Arriving Day")]
