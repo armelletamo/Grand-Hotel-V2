@@ -16,5 +16,8 @@ namespace GrandHotel.Data.Repository.Interface
         void UpdateClient(Client clt);
 
         Client MyReservation(string email);
+
+        void RemoveReservation(int idclient, int nbjour, DateTime date);
+        void RemoveFacture(int idclient, DateTime date);
     }
 }

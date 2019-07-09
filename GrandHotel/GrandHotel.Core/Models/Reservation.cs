@@ -29,8 +29,7 @@ namespace GrandHotel.Core.Models
         [Range(1, 5, ErrorMessage = "Value for {0} must be between {1} and {2}.")]
         public byte NbPersonnes { get; set; }
 
-        [Display(Name = "Number of Days")]
-        [NotMapped]
+        [Display(Name = "Number of Days")]        
         [BindRequired]
         public int NombreDeJour { get; set; }
 

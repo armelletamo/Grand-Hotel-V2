@@ -143,3 +143,4 @@ C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debu
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\Razor\Pages\Clients\Bills.g.cshtml.cs
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\Razor\Pages\Clients\ClientListOfBills.g.cshtml.cs
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\Razor\Pages\Clients\DetailOfBill.g.cshtml.cs
+C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\Razor\Pages\Clients\CancelReservation.g.cshtml.cs

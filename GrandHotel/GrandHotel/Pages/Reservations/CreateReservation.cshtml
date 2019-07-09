@@ -1,6 +1,5 @@
 ﻿@page
-@*<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>*@
+
 @model GrandHotel.Pages.Reservations.CreateReservationModel
 @{
 }
@@ -8,6 +7,7 @@
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
 <div class=" text-center container">
+
     <h2>Create a reservation</h2>
     <br /><br /><br />
     <form method="post" class="form-inline col-sm-6">
@@ -33,7 +33,7 @@
                 <span class="text-danger" asp-validation-for="Reservation.HeureArrivee"></span>
             </div>
             <div class="form-group col-md-2 ">
-                <label asp-for="Reservation.Travail"></label><br />                
+                <label asp-for="Reservation.Travail"></label><br />
                 <select asp-for="Reservation.Travail" class="form-control">
                     <option value="true">True</option>
                     <option value="false">False</option>

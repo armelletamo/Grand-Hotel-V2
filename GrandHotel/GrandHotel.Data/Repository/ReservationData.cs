@@ -41,18 +41,27 @@ namespace GrandHotel.Data.Repository
         {
 
             var client = db.Client.AsNoTracking().Where(x => x.Id == idclient).FirstOrDefault();
+            int nbjour = 0;
             for (int i = 0; i < reservation.NombreDeJour; i++)
             {
                 Reservation res = new Reservation();
                 res.NumChambre = numero;
                 res.NbPersonnes = reservation.NbPersonnes;
                 res.Travail = reservation.Travail;
+                if (nbjour == 0)
+                {
+                    res.NombreDeJour = reservation.NombreDeJour;
+                }
+                else
+                {
+                    res.NombreDeJour = 0;
+                }
                res.JourNavigation = db.Calendrier.Where(x=>x.Jour==reservation.Jour.AddDays(i)).FirstOrDefault();
                 res.HeureArrivee = reservation.HeureArrivee;
                 client.Reservation.Add(res);
                 db.Update(client);
                 db.SaveChanges();
-
+                nbjour++;
             }
 
 
