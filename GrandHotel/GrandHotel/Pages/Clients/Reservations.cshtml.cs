@@ -51,10 +51,8 @@ namespace GrandHotel.Pages.Clients
                 var newdate = DateTime.ParseExact(date, "dd/MM/yyyy", CultureInfo.InvariantCulture);
                 return RedirectToPage("./CancelReservation", new { idclt = idclient, d = newdate, nbj = nbjour });
             }
-            //ViewData["unabletocancel"] = "Sorry we are unable to cancel the reservation.please try again or call our customer service. Thanks!";
-            //return RedirectToPage("../Reservations/CreateReservation");
-            return Page();
-
+            TempData["unabletocancel"] = "Sorry we are unable to cancel the reservation.please try again or call our customer service. Thanks!";
+            return RedirectToPage("../Reservations/CreateReservation");
         }
     }
 }

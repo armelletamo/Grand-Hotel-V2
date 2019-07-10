@@ -55,12 +55,12 @@ using GrandHotel;
             WriteLiteral("\r\n<h2>List of Bills</h2>\r\n<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />\r\n");
             EndContext();
             BeginContext(151, 1065, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "55a6b806c79849d58e2daeb032c3f5c3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b37dd2ef8f6404b9a3bbf8549daa194", async() => {
                 BeginContext(157, 6, true);
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(163, 1044, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "252df6cfb1784a669a5300b93c085710", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1b1eb5af43634db2b1651f3f3e72eb47", async() => {
                     BeginContext(198, 288, true);
                     WriteLiteral(@"
         <table class=""table table-hover"">
@@ -115,7 +115,7 @@ using GrandHotel;
                     WriteLiteral("</td>\r\n\r\n                        <td>\r\n                            ");
                     EndContext();
                     BeginContext(825, 250, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c274c98689fe40a19e64c3f77d7f16f7", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b02661552a1544e8b706890bd2affdc1", async() => {
                         BeginContext(964, 107, true);
                         WriteLiteral("\r\n                                <i class=\"glyphicon glyphicon-zoom-in\"></i>\r\n                            ");
                         EndContext();

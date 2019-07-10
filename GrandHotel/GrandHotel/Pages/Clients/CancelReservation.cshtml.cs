@@ -22,10 +22,20 @@ namespace GrandHotel.Pages.Clients
         }
 
        
-        public void OnGet(int idclt, DateTime d, int nbj)
+        public IActionResult OnGet(int idclt, DateTime d, int nbj)
         {
-            //_client.RemoveReservation(idclt, nbj, d);
-            _client.RemoveFacture(idclt, d);
+            try
+            {
+                _client.RemoveReservation(idclt, nbj, d);
+                _client.RemoveFacture(idclt, d);
+                return Page();
+            }
+            catch
+            {
+                TempData["unabletocancel"] = "Sorry we are unable to cancel the reservation.please try again or call our customer service. Thanks!";
+                return RedirectToPage("../Reservations/CreateReservation");
+            }
+            
         }
     }
 }

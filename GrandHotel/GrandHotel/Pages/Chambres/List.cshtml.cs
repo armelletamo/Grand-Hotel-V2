@@ -15,7 +15,7 @@ namespace GrandHotel.Pages.Chambres
     {
 
         public static IEnumerable<Chambre> Chambres;
-        public  IEnumerable<Chambre> Chambre;
+        public IEnumerable<Chambre> Chambre;
 
         public IActionResult OnGet()
         {
@@ -26,17 +26,12 @@ namespace GrandHotel.Pages.Chambres
                 return Page();
             }
             return RedirectToPage("../Reservations/CreateReservation");
-           
+
         }
 
-        
+
         public IActionResult OnPost(short numchambre, int prix)
         {
-            var done = HttpContext.User.Identity.IsAuthenticated;
-            if (done)
-            {
-                return RedirectToPage("../Clients/Bills");
-            }
             ViewData["redirectionpath"] = "../Reservations/ConfirmReservation";
             ViewData["numchambre"] = numchambre;
             ViewData["prix"] = prix;
@@ -45,7 +40,12 @@ namespace GrandHotel.Pages.Chambres
             HttpContext.Session.SetInt32("prix", prix);
             HttpContext.Session.SetInt32("numchambre", numchambre);
 
-            return  RedirectToPage("../Authentication/login");
+            var done = HttpContext.User.Identity.IsAuthenticated;
+            if (done)
+            {
+                return RedirectToPage("../Clients/Bills", new { email= HttpContext.User.Identities.FirstOrDefault().Claims.FirstOrDefault().Value});
+            }
+            return RedirectToPage("../Authentication/login");
         }
     }
 }

@@ -53,7 +53,7 @@ using GrandHotel;
             WriteLiteral("\r\n<br /><br /><br /><br />\r\n<h2>My Reservations</h2>\r\n");
             EndContext();
             BeginContext(112, 1160, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "045ce3d6c63649de9c7fee601a2c6196", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "68e8b6c97ef54cdf83e78551602e3c22", async() => {
                 BeginContext(165, 366, true);
                 WriteLiteral(@"
 
@@ -143,7 +143,7 @@ using GrandHotel;
                 WriteLiteral("</td>\r\n                    <td>\r\n                        ");
                 EndContext();
                 BeginContext(951, 215, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ae6ff5c462d4e50963bf4de4733aa54", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f1c38f8de9324edb93f66100be851bea", async() => {
                     BeginContext(1095, 62, true);
                     WriteLiteral("\r\n                            Cancel\r\n                        ");
                     EndContext();

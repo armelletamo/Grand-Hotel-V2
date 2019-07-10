@@ -20,7 +20,6 @@ namespace GrandHotel.Pages.Chambres
             _chambre = chambre;
         }
 
-        //[Route("Chambres/Detail/{chambreId:short}/Prix:decimal}/{prixTotal:decimal/{nbnuit:int/")]
         public IActionResult OnGet(int chambreId, int Prix, int prixTotal, int nbnuit)
         {
             NewChambre = _chambre.DetailChambre(chambreId, Prix, prixTotal, nbnuit);
