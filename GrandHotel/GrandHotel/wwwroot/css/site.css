@@ -9,12 +9,6 @@ body {
     /*background-position-y:-400px;*/
 }
 
-.image {
-    background-image: url('../images/dans-chambre-luxe-fenetre.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {

@@ -4,30 +4,32 @@
 }
 <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<body>
+    <h2>Description of the room @Model.NewChambre.Numero</h2>
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <div>
+        Level: @Model.NewChambre.Etage
+    </div>
+    <div>
+        Number of beds: @Model.NewChambre.NbLits
+    </div>
+    <div>
+        Shower: @Model.NewChambre.Douche
+    </div>
+    <div>
+        Bath: @Model.NewChambre.Bain
+    </div>
+    <div>
+        WC: @Model.NewChambre.Wc
+    </div>
+    <div>
+        Unit Price: @Model.NewChambre.Prix
+    </div>
+    <div>
+        Total Price: @Model.NewChambre.PrixTotal for @Model.NewChambre.NbNuit nights
+    </div>
+    <br /><br /><br /><br /><br />
+    <a asp-page="./List" class="btn btn-default">Available rooms</a>
+</body>
 
-<h2>Description of the room @Model.NewChambre.Numero</h2>
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<div>
-    Level: @Model.NewChambre.Etage
-</div>
-<div>
-    Number of beds: @Model.NewChambre.NbLits
-</div>
-<div>
-    Shower: @Model.NewChambre.Douche
-</div>
-<div>
-    Bath: @Model.NewChambre.Bain
-</div>
-<div>
-    WC: @Model.NewChambre.Wc
-</div>
-<div>
-    Unit Price: @Model.NewChambre.Prix
-</div>
-<div>
-    Total Price: @Model.NewChambre.PrixTotal for @Model.NewChambre.NbNuit nights
-</div>
-<br /><br /><br /><br /><br />
-<a asp-page="./List" class="btn btn-default">Available rooms</a>
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

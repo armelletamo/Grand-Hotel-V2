@@ -4,74 +4,77 @@
 
 }
 <br /><br /><br /><br />
-<h2>Fill your informations</h2>
-<form method="post" class="form-horizontal col-sm-6">
-    <div class="form-group ">
-        <label asp-for="client.Civilite"></label>
-        <select asp-for="client.Civilite" class="form-control">
-            <option value="Mr">Mr</option>
-            <option value="Mme">Mme</option>
-        </select>
-        <span class="text-danger" asp-validation-for="client.Civilite"></span>
-    </div>
-    <div class="form-group ">
-        <label asp-for="client.Nom"></label>
-        <input asp-for="client.Nom" class="form-control" />
-        <span class="text-danger" asp-validation-for="client.Nom"></span>
-    </div>
-    <div class="form-group ">
-        <label asp-for="client.Prenom"></label>
-        <input asp-for="client.Prenom" class="form-control" />
-        <span class="text-danger" asp-validation-for="client.Prenom"></span>
-    </div>
-    <div class="form-group ">
-        <label asp-for="client.Email"></label>
-        <input asp-for="client.Email" class="form-control" value="@Model.client.Email" readonly />
-        <span class="text-danger" asp-validation-for="client.Email"></span>
-    </div>
-    <div class="form-group ">
-        <label asp-for="client.CarteFidelite"></label>
-        <input asp-for="client.CarteFidelite" class="form-control" />
-        <span class="text-danger" asp-validation-for="client.CarteFidelite"></span>
-    </div>
-    <div class="form-group ">
-        <label asp-for="client.Societe"></label>
-        <input asp-for="client.Societe" class="form-control" />
-        <span class="text-danger" asp-validation-for="client.Societe"></span>
-    </div>
-    <div class="form-group ">
-        <label asp-for="adresse.Rue"></label>
-        <input asp-for="adresse.Rue" class="form-control" />
-        <span class="text-danger" asp-validation-for="adresse.Rue"></span>
-    </div>
-    <div class="form-group ">
-        <label asp-for="adresse.Complement"></label>
-        <input asp-for="adresse.Complement" class="form-control" />
-        <span class="text-danger" asp-validation-for="adresse.Complement"></span>
-    </div>
-    <div class="form-group ">
-        <label asp-for="adresse.CodePostal"></label>
-        <input asp-for="adresse.CodePostal" class="form-control" />
-        <span class="text-danger" asp-validation-for="adresse.CodePostal"></span>
-    </div>
-    <div class="form-group ">
-        <label asp-for="adresse.Ville"></label>
-        <input asp-for="adresse.Ville" class="form-control" />
-        <span class="text-danger" asp-validation-for="adresse.Ville"></span>
-    </div>
-    <div class="form-group ">
-        <label asp-for="telephone.Numero"></label>
-        <input asp-for="telephone.Numero" class="form-control" />
-        <span class="text-danger" asp-validation-for="telephone.Numero"></span>
-    </div>
-    <div class="form-group ">
-        <label asp-for="telephone.CodeType"></label>
-        <select asp-for="telephone.CodeType" class="form-control">
-            <option value="F">Fixe</option>
-            <option value="P">Portable</option>
-        </select>
-        <span class="text-danger" asp-validation-for="telephone.CodeType"></span>
-    </div>
-    <button type="submit" class="btn btn-primary">Add</button>
-</form>
+<body>
+    <h2>Fill your informations</h2>
+    <form method="post" class="form-horizontal col-sm-6">
+        <div class="form-group ">
+            <label asp-for="client.Civilite"></label>
+            <select asp-for="client.Civilite" class="form-control">
+                <option value="Mr">Mr</option>
+                <option value="Mme">Mme</option>
+            </select>
+            <span class="text-danger" asp-validation-for="client.Civilite"></span>
+        </div>
+        <div class="form-group ">
+            <label asp-for="client.Nom"></label>
+            <input asp-for="client.Nom" class="form-control" />
+            <span class="text-danger" asp-validation-for="client.Nom"></span>
+        </div>
+        <div class="form-group ">
+            <label asp-for="client.Prenom"></label>
+            <input asp-for="client.Prenom" class="form-control" />
+            <span class="text-danger" asp-validation-for="client.Prenom"></span>
+        </div>
+        <div class="form-group ">
+            <label asp-for="client.Email"></label>
+            <input asp-for="client.Email" class="form-control" value="@Model.client.Email" readonly />
+            <span class="text-danger" asp-validation-for="client.Email"></span>
+        </div>
+        <div class="form-group ">
+            <label asp-for="client.CarteFidelite"></label>
+            <input asp-for="client.CarteFidelite" class="form-control" />
+            <span class="text-danger" asp-validation-for="client.CarteFidelite"></span>
+        </div>
+        <div class="form-group ">
+            <label asp-for="client.Societe"></label>
+            <input asp-for="client.Societe" class="form-control" />
+            <span class="text-danger" asp-validation-for="client.Societe"></span>
+        </div>
+        <div class="form-group ">
+            <label asp-for="adresse.Rue"></label>
+            <input asp-for="adresse.Rue" class="form-control" />
+            <span class="text-danger" asp-validation-for="adresse.Rue"></span>
+        </div>
+        <div class="form-group ">
+            <label asp-for="adresse.Complement"></label>
+            <input asp-for="adresse.Complement" class="form-control" />
+            <span class="text-danger" asp-validation-for="adresse.Complement"></span>
+        </div>
+        <div class="form-group ">
+            <label asp-for="adresse.CodePostal"></label>
+            <input asp-for="adresse.CodePostal" class="form-control" />
+            <span class="text-danger" asp-validation-for="adresse.CodePostal"></span>
+        </div>
+        <div class="form-group ">
+            <label asp-for="adresse.Ville"></label>
+            <input asp-for="adresse.Ville" class="form-control" />
+            <span class="text-danger" asp-validation-for="adresse.Ville"></span>
+        </div>
+        <div class="form-group ">
+            <label asp-for="telephone.Numero"></label>
+            <input asp-for="telephone.Numero" class="form-control" />
+            <span class="text-danger" asp-validation-for="telephone.Numero"></span>
+        </div>
+        <div class="form-group ">
+            <label asp-for="telephone.CodeType"></label>
+            <select asp-for="telephone.CodeType" class="form-control">
+                <option value="F">Fixe</option>
+                <option value="P">Portable</option>
+            </select>
+            <span class="text-danger" asp-validation-for="telephone.CodeType"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+</body>
+
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

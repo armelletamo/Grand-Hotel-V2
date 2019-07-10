@@ -6,45 +6,48 @@
 
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 <p style="color:red">@TempData["unabletocancel"]</p>
-<div class=" text-center container">
+<body>
+    <div class=" text-center container">
 
-    <h2>Create a reservation</h2>
-    <br /><br /><br />
-    <form method="post" class="form-inline col-sm-6">
-        <div asp-validation-summary="None" class="container">
-            <div class="form-group col-md-2">
-                <label asp-for="Reservation.Jour"></label>
-                <input asp-for="Reservation.Jour" class="form-control" />
-                <span class="text-danger" asp-validation-for="Reservation.Jour"></span>
+        <h2>Create a reservation</h2>
+        <br /><br /><br />
+        <form method="post" class="form-inline col-sm-6">
+            <div asp-validation-summary="None" class="container">
+                <div class="form-group col-md-2">
+                    <label asp-for="Reservation.Jour"></label>
+                    <input asp-for="Reservation.Jour" class="form-control" />
+                    <span class="text-danger" asp-validation-for="Reservation.Jour"></span>
+                </div>
+                <div class="form-group col-md-2">
+                    <label asp-for="Reservation.NombreDeJour"></label>
+                    <input asp-for="Reservation.NombreDeJour" class="form-control" />
+                    <span class="text-danger" asp-validation-for="Reservation.NombreDeJour"></span>
+                </div>
+                <div class="form-group col-md-2">
+                    <label asp-for="Reservation.NbPersonnes"></label>
+                    <input asp-for="Reservation.NbPersonnes" class="form-control" />
+                    <span class="text-danger" asp-validation-for="Reservation.NbPersonnes"></span>
+                </div>
+                <div class="form-group col-md-2">
+                    <label asp-for="Reservation.HeureArrivee"></label>
+                    <input asp-for="Reservation.HeureArrivee" class="form-control" />
+                    <span class="text-danger" asp-validation-for="Reservation.HeureArrivee"></span>
+                </div>
+                <div class="form-group col-md-2 ">
+                    <label asp-for="Reservation.Travail"></label><br />
+                    <select asp-for="Reservation.Travail" class="form-control">
+                        <option value="true">True</option>
+                        <option value="false">False</option>
+                    </select>
+                    <span class="text-danger" asp-validation-for="Reservation.Travail"></span>
+                </div>
+                <div class="form-group col-md-2">
+                    <button type="submit" class="btn btn-primary form-control" style="margin-top:24px;">Search</button>
+                </div>
             </div>
-            <div class="form-group col-md-2">
-                <label asp-for="Reservation.NombreDeJour"></label>
-                <input asp-for="Reservation.NombreDeJour" class="form-control" />
-                <span class="text-danger" asp-validation-for="Reservation.NombreDeJour"></span>
-            </div>
-            <div class="form-group col-md-2">
-                <label asp-for="Reservation.NbPersonnes"></label>
-                <input asp-for="Reservation.NbPersonnes" class="form-control" />
-                <span class="text-danger" asp-validation-for="Reservation.NbPersonnes"></span>
-            </div>
-            <div class="form-group col-md-2">
-                <label asp-for="Reservation.HeureArrivee"></label>
-                <input asp-for="Reservation.HeureArrivee" class="form-control" />
-                <span class="text-danger" asp-validation-for="Reservation.HeureArrivee"></span>
-            </div>
-            <div class="form-group col-md-2 ">
-                <label asp-for="Reservation.Travail"></label><br />
-                <select asp-for="Reservation.Travail" class="form-control">
-                    <option value="true">True</option>
-                    <option value="false">False</option>
-                </select>
-                <span class="text-danger" asp-validation-for="Reservation.Travail"></span>
-            </div>
-            <div class="form-group col-md-2">
-                <button type="submit" class="btn btn-primary form-control" style="margin-top:24px;">Search</button>
-            </div>
-        </div>
 
-    </form>
-</div>
+        </form>
+    </div>
+</body>
+
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

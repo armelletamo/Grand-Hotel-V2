@@ -57,7 +57,7 @@ using GrandHotel;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             BeginContext(60, 60, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e59f62ad3c354886ba66879e5d31a82b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "74b5a9c78c6f4f5c9483e101dad2cdf6", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -75,7 +75,7 @@ using GrandHotel;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(122, 64, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "435cbecee5c148ec9f2482b3aaec5f04", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ccd4cc9b621743949cb0b94052a50531", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -93,12 +93,12 @@ using GrandHotel;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(188, 1696, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "02affebc459643d799ed22b6eaf0439f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b464b3d4255f4945b7bd513853ebc3b4", async() => {
                 BeginContext(196, 6, true);
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(202, 1673, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7c5090e2dac44ac199ea65e3e8ed825c", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "28c02f9bdc6644bca8c6f37463d9d2ba", async() => {
                     BeginContext(238, 433, true);
                     WriteLiteral(@"
         <table class=""table table-hover"">
@@ -196,7 +196,7 @@ using GrandHotel;
                     WriteLiteral("</td>\r\n                        <td>\r\n                            ");
                     EndContext();
                     BeginContext(1179, 362, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2f17fd286aa9436384c4f96870b30868", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "13f5268435d74be0b7027e8fe11c2876", async() => {
                         BeginContext(1430, 107, true);
                         WriteLiteral("\r\n                                <i class=\"glyphicon glyphicon-zoom-in\"></i>\r\n                            ");
                         EndContext();
@@ -259,7 +259,7 @@ using GrandHotel;
                     WriteLiteral("\r\n                            ");
                     EndContext();
                     BeginContext(1571, 174, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "32e3a5be90894893ba4e4f8183d9f848", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "875888481aa1488d9a84f807e664ad99", async() => {
                         BeginContext(1668, 68, true);
                         WriteLiteral("\r\n                                Book\r\n                            ");
                         EndContext();
