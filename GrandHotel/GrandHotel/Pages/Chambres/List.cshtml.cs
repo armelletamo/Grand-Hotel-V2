@@ -43,7 +43,7 @@ namespace GrandHotel.Pages.Chambres
             var done = HttpContext.User.Identity.IsAuthenticated;
             if (done)
             {
-                return RedirectToPage("../Clients/Bills", new { email= HttpContext.User.Identities.FirstOrDefault().Claims.FirstOrDefault().Value});
+                return RedirectToPage("../Clients/Bills");
             }
             return RedirectToPage("../Authentication/login");
         }

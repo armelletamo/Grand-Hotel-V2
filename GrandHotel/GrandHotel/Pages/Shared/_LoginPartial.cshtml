@@ -5,7 +5,7 @@
 
 @if (User.Claims.Count() != 0)
 {
-    var username = @User.Identities.FirstOrDefault().Claims.FirstOrDefault().Value;
+    var username = User.Identities.FirstOrDefault().Claims.FirstOrDefault().Value;
     <form asp-page="/Authentication/Logout" method="post" class="navbar-right">
         <ul class="nav navbar-nav navbar-right">
             <li>
@@ -17,9 +17,9 @@
                     <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a asp-page="/Clients/Details" asp-route-email="@username">My Details</a></li>
-                    <li><a asp-page="/Clients/Reservations" asp-route-email="@username">My Reservations</a></li>
-                    <li><a asp-page="/Clients/ClientListOfBills" asp-route-email="@username">My Invoices</a></li>
+                    <li><a asp-page="/Clients/Details">My Details</a></li>
+                    <li><a asp-page="/Clients/Reservations">My Reservations</a></li>
+                    <li><a asp-page="/Clients/ClientListOfBills" asp-route-year="2019">My Invoices</a></li>
                 </ul>
             </li>            
             <li>

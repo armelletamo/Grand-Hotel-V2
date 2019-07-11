@@ -27,7 +27,6 @@ namespace GrandHotel.Pages.Clients
         }
         public ActionResult OnGet(string email)
         {
-
             client.Email = email;
             return Page();
            

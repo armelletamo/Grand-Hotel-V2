@@ -45,8 +45,9 @@ namespace GrandHotel.Pages.Clients
             _facture = newfacture;
         }
 
-        public IActionResult OnGet(string email)
+        public IActionResult OnGet()
         {
+            string email = HttpContext.User.Identities.FirstOrDefault().Claims.FirstOrDefault().Value;
             prixtotal = (int)HttpContext.Session.GetInt32("prix");
             prixht = (int)Math.Ceiling(prixtotal / 1.188);
             res = HttpContext.Session.GetObjectFromJson<Reservation>("Reservation");

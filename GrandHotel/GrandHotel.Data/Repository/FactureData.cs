@@ -7,7 +7,7 @@ using System.Text;
 
 namespace GrandHotel.Data.Repository
 {
-    public class FactureData: IFacture
+    public class FactureData : IFacture
     {
         private readonly GrandHotelContext db;
         public FactureData(GrandHotelContext db)
@@ -15,14 +15,16 @@ namespace GrandHotel.Data.Repository
             this.db = db;
         }
 
-        public IEnumerable<Facture> GetBills(int id)
+        public IEnumerable<Facture> GetBills(int id, int year)
         {
-          return  db.Facture.Where(x => x.IdClient == id).ToList();
+            return db.Facture
+                  .Where(x => x.IdClient == id && x.DateFacture.Year == year)
+                  .OrderByDescending(x => x.DateFacture).ToList();
         }
 
         public int SaveBills(int idclient, Facture facture)
         {
-           var client= db.Client.Where(x => x.Id == idclient).FirstOrDefault();
+            var client = db.Client.Where(x => x.Id == idclient).FirstOrDefault();
             client.Facture.Add(facture);
             db.SaveChanges();
             return db.Facture.Where(x => x.IdClient == idclient).Select(x => x.Id).LastOrDefault();
@@ -30,15 +32,15 @@ namespace GrandHotel.Data.Repository
 
         public LigneFacture GetBillsDetail(int id)
         {
-            var detail = db.LigneFacture.Where(x=>x.IdFacture==id).FirstOrDefault();
+            var detail = db.LigneFacture.Where(x => x.IdFacture == id).FirstOrDefault();
             return detail;
-            
+
         }
 
         public void SaveLigneFacture(int id, LigneFacture ligne)
         {
             int numligne = db.LigneFacture.Where(x => x.IdFacture == id).Count();
-            ligne.NumLigne = numligne+1;
+            ligne.NumLigne = numligne + 1;
             var fact = db.Facture.Where(x => x.Id == id).FirstOrDefault();
             fact.LigneFacture.Add(ligne);
             db.SaveChanges();

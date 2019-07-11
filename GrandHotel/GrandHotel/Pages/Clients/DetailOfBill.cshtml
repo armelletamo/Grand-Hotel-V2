@@ -1,5 +1,9 @@
 ﻿@page
 @model GrandHotel.Pages.Clients.DetailOfBillModel
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="~/js/site.min.js"></script>
 <body>
     <h2>Detail of Bills @Model.ligneFacture.IdFacture</h2>
     <br /><br /><br /><br />
@@ -10,10 +14,10 @@
         Pre-Tax Amount: @Model.ligneFacture.MontantHt euros
     </div>
     <div>
-        VAT Rate: @Model.ligneFacture.TauxReduction %
+        VAT Rate: @Model.ligneFacture.TauxReduction 
     </div>
     <div>
-        Reduction Rate: @Model.ligneFacture.TauxTva %
+        Reduction Rate: @Model.ligneFacture.TauxTva 
     </div>
 </body>
 

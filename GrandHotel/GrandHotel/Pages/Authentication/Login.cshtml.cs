@@ -75,7 +75,7 @@ namespace GrandHotel.Pages.Authentication
             }
             if (path != null && path.Contains("Reservations"))
             {              
-                return RedirectToPage("../Clients/Bills", new { email = username } );
+                return RedirectToPage("../Clients/Bills");
             }
             return RedirectToPage("../Reservations/CreateReservation");
         }

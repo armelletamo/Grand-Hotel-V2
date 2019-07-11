@@ -1,10 +1,28 @@
 ﻿@page
 @model GrandHotel.Pages.Clients.ClientListOfBillsModel
 
+<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="~/js/site.min.js"></script>
+
 <h2>List of Bills</h2>
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br />
 <body>
-    <form method="get" asp-page="List">
+    <form method="get" class="col-sm-6">
+        <div class="form-actions no-color col-sm-2" style="display:inline-block; margin-top:8px;">
+            <label style="font-size:medium">Bills  of:</label>
+        </div>
+        <div class="form-actions no-color col-sm-3" style="display:inline">
+            <select class="form-control" asp-for="Year">
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+            </select>
+        </div>
+        <div class=" col-sm-3" style="display:inline">            
+            <button type="submit" class="form-control btn btn-primary" asp-route-year="@Model.Year" >Find</button>
+        </div>
+
+        <br />
         <table class="table table-hover">
             <thead>
                 <tr>

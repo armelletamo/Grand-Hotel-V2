@@ -1,55 +1,57 @@
 ﻿@page
 @model GrandHotel.Pages.Clients.BillsModel
+<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="~/js/site.min.js"></script>
+<body>
+    <h2>Bills</h2>
 
-    <body>
-        <h2>Bills</h2>
-
-        <form method="post" class="form-horizontal col-sm-6">
-            <div asp-validation-summary="None">
-                <div class="form-group">
-                    <label asp-for="facture.DateFacture"></label>
-                    <input asp-for="facture.DateFacture" asp-format="{0:yyyy-MM-dd}" type="date" class="form-control" readonly />
-                    <span class="text-danger" asp-validation-for="facture.DateFacture"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="facture.DatePaiement"></label>
-                    <input asp-for="facture.DatePaiement" asp-format="{0:yyyy-MM-dd}" type="date" class="form-control" readonly />
-                    <span class="text-danger" asp-validation-for="facture.DatePaiement"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="facture.CodeModePaiement"></label>
-                    <select asp-for="facture.CodeModePaiement" class="form-control">
-                        <option value="CHQ">Check</option>
-                        <option value="ESP">Cash</option>
-                        <option value="CB">Bank Card</option>
-                    </select>
-                    <span class="text-danger" asp-validation-for="facture.DatePaiement"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="ligneFacture.Quantite"></label>
-                    <input asp-for="ligneFacture.Quantite" class="form-control" readonly />
-                    <span class="text-danger" asp-validation-for="ligneFacture.Quantite"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="ligneFacture.MontantHt"></label>
-                    <input asp-for="ligneFacture.MontantHt" class="form-control" readonly />
-                    <span class="text-danger" asp-validation-for="ligneFacture.MontantHt"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="ligneFacture.TauxTva"></label>
-                    <input asp-for="ligneFacture.TauxTva" value="0,2" class="form-control" readonly />
-                    <span class="text-danger" asp-validation-for="ligneFacture.TauxTva"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="ligneFacture.TauxReduction"></label>
-                    <input asp-for="ligneFacture.TauxReduction" value="0,1" class="form-control" readonly />
-                    <span class="text-danger" asp-validation-for="ligneFacture.TauxReduction"></span>
-                </div>
-
-                <button type="submit" name="save" asp-route-username="@ViewData["email"]" class="btn btn-primary" value="Save">Pay</button>
-                <button type="submit" class="btn btn-primary" value="Cancel" name="cancel">Cancel the reservation</button>
-
+    <form method="post" class="form-horizontal col-sm-6">
+        <div asp-validation-summary="None">
+            <div class="form-group">
+                <label asp-for="facture.DateFacture"></label>
+                <input asp-for="facture.DateFacture" asp-format="{0:yyyy-MM-dd}" type="date" class="form-control" readonly />
+                <span class="text-danger" asp-validation-for="facture.DateFacture"></span>
             </div>
-        </form>
+            <div class="form-group">
+                <label asp-for="facture.DatePaiement"></label>
+                <input asp-for="facture.DatePaiement" asp-format="{0:yyyy-MM-dd}" type="date" class="form-control" readonly />
+                <span class="text-danger" asp-validation-for="facture.DatePaiement"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="facture.CodeModePaiement"></label>
+                <select asp-for="facture.CodeModePaiement" class="form-control">
+                    <option value="CHQ">Check</option>
+                    <option value="ESP">Cash</option>
+                    <option value="CB">Bank Card</option>
+                </select>
+                <span class="text-danger" asp-validation-for="facture.DatePaiement"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ligneFacture.Quantite"></label>
+                <input asp-for="ligneFacture.Quantite" class="form-control" readonly />
+                <span class="text-danger" asp-validation-for="ligneFacture.Quantite"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ligneFacture.MontantHt"></label>
+                <input asp-for="ligneFacture.MontantHt" class="form-control" readonly />
+                <span class="text-danger" asp-validation-for="ligneFacture.MontantHt"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ligneFacture.TauxTva"></label>
+                <input asp-for="ligneFacture.TauxTva" value="0,2" class="form-control" readonly />
+                <span class="text-danger" asp-validation-for="ligneFacture.TauxTva"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ligneFacture.TauxReduction"></label>
+                <input asp-for="ligneFacture.TauxReduction" value="0,1" class="form-control" readonly />
+                <span class="text-danger" asp-validation-for="ligneFacture.TauxReduction"></span>
+            </div>
 
-    </body>
+            <button type="submit" name="save" asp-route-username="@ViewData["email"]" class="btn btn-primary" value="Save">Pay</button>
+            <button type="submit" class="btn btn-primary" value="Cancel" name="cancel">Cancel the reservation</button>
+
+        </div>
+    </form>
+
+</body>

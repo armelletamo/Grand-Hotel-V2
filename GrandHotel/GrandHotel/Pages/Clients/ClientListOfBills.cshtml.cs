@@ -16,17 +16,33 @@ namespace GrandHotel.Pages.Clients
         private readonly IClient _client;
         private readonly IFacture _facture;
         public IEnumerable<Facture> ListOfFacture;
+        [BindProperty(SupportsGet = true)]
+        public int Year { get; set; }
 
-      
         public ClientListOfBillsModel(IClient client, IFacture newfacture)
         {
             _client = client;
             _facture = newfacture;
         }
-        public IActionResult OnGet(string email)
+        public IActionResult OnGet(int year)
         {
-            int id = _client.GetClient(email).Id;
-            ListOfFacture = _facture.GetBills(id);
+            string username = HttpContext.User.Identities.FirstOrDefault().Claims.FirstOrDefault().Value;
+            try
+            {
+                int id = _client.GetClient(username).Id;
+
+                if (year != DateTime.Now.Year)
+                {
+                    ListOfFacture = _facture.GetBills(id, Year);
+                    return Page();
+                }
+                ListOfFacture = _facture.GetBills(id, year);
+                
+            }
+            catch (Exception)
+            {
+
+            }
             return Page();
         }
     }

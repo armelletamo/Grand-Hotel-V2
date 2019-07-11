@@ -9,7 +9,7 @@ namespace GrandHotel.Data.Repository.Interface
     {
         int SaveBills(int idclient, Facture facture);
 
-        IEnumerable<Facture> GetBills(int id);
+        IEnumerable<Facture> GetBills(int id, int year);
 
         LigneFacture GetBillsDetail(int id);
 

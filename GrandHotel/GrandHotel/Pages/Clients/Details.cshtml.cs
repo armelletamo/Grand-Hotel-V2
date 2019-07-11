@@ -23,9 +23,11 @@ namespace GrandHotel.Pages.Clients
         {
             _client = client;
         }
-        public IActionResult OnGet(string email)
+        public IActionResult OnGet()
         {
-           clt= _client.GetDetails(email);
+            string username = HttpContext.User.Identities.FirstOrDefault().Claims.FirstOrDefault().Value;
+
+            clt = _client.GetDetails(username);
             return Page();
         }
 

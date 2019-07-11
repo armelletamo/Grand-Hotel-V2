@@ -26,9 +26,10 @@ namespace GrandHotel.Pages.Clients
             _client = client;
             reservations = new List<Reservation>();
         }
-        public IActionResult OnGet(string email)
+        public IActionResult OnGet()
         {
-            clt = _client.MyReservation(email);
+            string username = HttpContext.User.Identities.FirstOrDefault().Claims.FirstOrDefault().Value;
+            clt = _client.MyReservation(username);
             if (clt.Reservation.Count != 0)
             {
                 foreach (var res in clt.Reservation)

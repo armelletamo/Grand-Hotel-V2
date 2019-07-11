@@ -1,45 +1,47 @@
 ﻿@page
 @model GrandHotel.Pages.Clients.ReservationsModel
-
+<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="~/js/site.min.js"></script>
 <br /><br /><br /><br />
-                  <body>
-                      <h2>My Reservations</h2>
-                      <form method="post" class="form-horizontal col-sm-6">
+<body>
+    <h2>My Reservations</h2>
+    <form method="post" class="form-horizontal col-sm-6">
 
-                          <table class="table table-hover">
-                              <thead>
-                                  <tr>
-                                      <th>Room number</th>
-                                      <th>Date </th>
-                                      <th>Number of days </th>
-                                      <th>Number of persons</th>
-                                      <th>Arriving time</th>
-                                      <th>For Work?</th>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Room number</th>
+                    <th>Date </th>
+                    <th>Number of days </th>
+                    <th>Number of persons</th>
+                    <th>Arriving time</th>
+                    <th>For Work?</th>
 
-                                  </tr>
-                              </thead>
-                              <tbody>
-                                  @foreach (var res in Model.reservations)
-                                  {
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var res in Model.reservations)
+                {
 
-                                      <tr>
-                                          <td>@res.NumChambre</td>
-                                          <td>@res.Jour.Date</td>
-                                          <td>@res.NombreDeJour</td>
-                                          <td>@res.NbPersonnes</td>
-                                          <td>@res.HeureArrivee</td>
-                                          <td>@res.Travail</td>
-                                          <td>
-                                              <button type="submit" asp-route-idclient="@res.IdClient" asp-route-date="@res.Jour.ToString("dd/MM/yyyy")" asp-route-nbjour="@res.NombreDeJour">
-                                                  Cancel
-                                              </button>
-                                          </td>
-                                      </tr>
-                                  }
-                              </tbody>
-                          </table>
-                      </form>
-                  </body>
+                    <tr>
+                        <td>@res.NumChambre</td>
+                        <td>@res.Jour.Date</td>
+                        <td>@res.NombreDeJour</td>
+                        <td>@res.NbPersonnes</td>
+                        <td>@res.HeureArrivee</td>
+                        <td>@res.Travail</td>
+                        <td>
+                            <button type="submit" asp-route-idclient="@res.IdClient" asp-route-date="@res.Jour.ToString("dd/MM/yyyy")" asp-route-nbjour="@res.NombreDeJour">
+                                Cancel
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </form>
+</body>
 
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
