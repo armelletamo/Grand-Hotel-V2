@@ -23,6 +23,7 @@ using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
+
 namespace GrandHotel
 {
     public class Startup
@@ -49,7 +50,7 @@ namespace GrandHotel
             services.AddTransient<IClient, ClientData>();
             services.AddTransient<ILogin, LoginData>();
             services.AddTransient<IFacture, FactureData>();
-
+            
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.

@@ -1,5 +1,6 @@
 ﻿@page
-@model GrandHotel.Pages.Chambres.ListModel
+
+@model Pages.Chambres.ListModel
 @{
 
 }
@@ -21,7 +22,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var chambre in Model.Chambre)
+                @foreach (var chambre in Model.Chambres)
                 {
                     <tr>
                         <td>@chambre.Numero</td>
@@ -45,6 +46,23 @@
                 }
             </tbody>
         </table>
+
+        @{
+            var prevDisabled = !Model.Chambres.HasPreviousPage ? "disabled" : "";
+            var nextDisabled = !Model.Chambres.HasNextPage ? "disabled" : "";
+        }
+
+        <a
+          
+           asp-route-pageNumber="@(Model.Chambres.PageIndex - 1)"
+           class="btn btn-default @prevDisabled">
+            Previous
+        </a>
+        <a asp-action="Index"
+           asp-route-pageNumber="@(Model.Chambres.PageIndex + 1)"
+           class="btn btn-default @nextDisabled">
+            Next
+        </a>
     </form>
 </body>
 

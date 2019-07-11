@@ -55,7 +55,7 @@ using GrandHotel;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             BeginContext(58, 60, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "165c3613e9ca41b99472a6eb5c848f02", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ddc27ecd830641a8a4041f3ce26a946c", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -73,7 +73,7 @@ using GrandHotel;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(120, 64, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "15cc0ce4fddd4608bc2c028a3a62bb71", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e691bfe3cd1a4eaba5522a24bf6f9b8d", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -91,7 +91,7 @@ using GrandHotel;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(186, 40, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f723a0ed7c3f44ef98709923e0f1ebe5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "43108b9b5ced43c1a09df0be6a6945cf", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -109,12 +109,12 @@ using GrandHotel;
             WriteLiteral("\r\n<br /><br /><br /><br />\r\n");
             EndContext();
             BeginContext(254, 1335, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0c8830e6dc1940ff89ccc5157576d3ab", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3f3fa6275b3f4c3f89315dc8ed755ab8", async() => {
                 BeginContext(260, 36, true);
                 WriteLiteral("\r\n    <h2>My Reservations</h2>\r\n    ");
                 EndContext();
                 BeginContext(296, 1284, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "128e5f6dbace4dc7bca8ecf82c8a2880", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f6f67d627e754d028ada6189439ec080", async() => {
                     BeginContext(349, 414, true);
                     WriteLiteral(@"
 
@@ -204,7 +204,7 @@ using GrandHotel;
                     WriteLiteral("</td>\r\n                        <td>\r\n                            ");
                     EndContext();
                     BeginContext(1227, 223, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4cacf770234046f08f5ee852b4ae9834", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "898917bc40934ba391a8b2a98bf0e11d", async() => {
                         BeginContext(1371, 70, true);
                         WriteLiteral("\r\n                                Cancel\r\n                            ");
                         EndContext();

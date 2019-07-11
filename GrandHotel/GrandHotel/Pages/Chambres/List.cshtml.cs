@@ -9,20 +9,25 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
+
 namespace GrandHotel.Pages.Chambres
 {
     public class ListModel : PageModel
     {
+        [BindProperty]
+        public PaginatedList<Chambre> Chambres { get; set; }
 
-        public static IEnumerable<Chambre> Chambres;
         public IEnumerable<Chambre> Chambre;
+       // PaginatedList<Chambre> PageListChambre;
 
-        public IActionResult OnGet()
+        public IActionResult OnGet(int? pageNumber)
         {
+            int pagesize = 5;
             var listeDeChambre = HttpContext.Session.GetObjectFromJson<IEnumerable<Chambre>>("ListeDeChambre");
             if (listeDeChambre != null)
-            {
+            {                              
                 Chambre = listeDeChambre;
+                Chambres = PaginatedList<Chambre>.Create(Chambre, pageNumber ?? 1, pagesize);
                 return Page();
             }
             return RedirectToPage("../Reservations/CreateReservation");

@@ -37,3 +37,4 @@ C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel.Core\obj
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel.Core\obj\Debug\netcoreapp2.1\GrandHotel.Core.csproj.CopyComplete
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel.Core\obj\Debug\netcoreapp2.1\GrandHotel.Core.dll
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel.Core\obj\Debug\netcoreapp2.1\GrandHotel.Core.pdb
+C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel.Core\obj\Debug\netcoreapp2.1\GrandHotel.Core.csprojAssemblyReference.cache

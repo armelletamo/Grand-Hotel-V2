@@ -39,7 +39,7 @@ namespace GrandHotel.Pages.Reservations
                 var ChambreDispo = _chambre.ChambresDisponible(MaReservation, Reservation.NbPersonnes, Reservation.NombreDeJour);
                 HttpContext.Session.SetObjectAsJson("Reservation", Reservation);
                 HttpContext.Session.SetObjectAsJson("ListeDeChambre", ChambreDispo);
-                return RedirectToPage("../Chambres/List");
+                return RedirectToPage("../Chambres/List", new { pageNumber = 1 });
             }
             return Page();
         }
