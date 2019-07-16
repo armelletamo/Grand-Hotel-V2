@@ -31,11 +31,15 @@
                         <td>@res.NbPersonnes</td>
                         <td>@res.HeureArrivee</td>
                         <td>@res.Travail</td>
-                        <td>
-                            <button type="submit" asp-route-idclient="@res.IdClient" asp-route-date="@res.Jour.ToString("dd/MM/yyyy")" asp-route-nbjour="@res.NombreDeJour">
-                                Cancel
-                            </button>
-                        </td>
+                        @if (res.Jour < DateTime.Now.AddDays(-1))
+                        {
+                            <td>
+                                <button type="submit" asp-route-idclient="@res.IdClient" asp-route-date="@res.Jour.ToString("dd/MM/yyyy")" asp-route-nbjour="@res.NombreDeJour">
+                                    Cancel
+                                </button>
+                            </td>
+                        }
+
                     </tr>
                 }
             </tbody>

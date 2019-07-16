@@ -1,0 +1,30 @@
+﻿@page
+@model GrandHotel.Pages.Contacts.ContactUsModel
+@{
+}
+    <div >
+        <p>@TempData["confirm"]</p>
+        <br /><br />
+        <form   method="post">
+            <div class="form-group"  asp-validation-summary="None">
+                <div class="col-md-12 form-group">
+                    <input asp-for="Contact.Name" class="form-control" placeholder="Name" />
+                    <span asp-validation-for="Contact.Name" style="color: red"></span>
+                </div>
+                <div class="col-md-12 form-group">
+                    <input asp-for="Contact.Email" class="form-control" placeholder="Email" />
+                    <span asp-validation-for="Contact.Email" style="color: red"></span>
+                </div>
+                <div class="col-md-12 form-group">
+                    <input asp-for="Contact.Subject" class="form-control" placeholder="Object" />
+                    <span asp-validation-for="Contact.Subject" style="color: red"></span>
+                </div>
+                <div class="col-md-12 form-group">
+                    <textarea asp-for="Contact.Message" class="message form-control" placeholder="Your message..."></textarea>
+                </div>
+                <div class="col-md-6">
+                    <button class="btn btn-primary" type="submit" id="submit">Send</button>
+                </div>
+            </div>
+        </form>
+    </div>

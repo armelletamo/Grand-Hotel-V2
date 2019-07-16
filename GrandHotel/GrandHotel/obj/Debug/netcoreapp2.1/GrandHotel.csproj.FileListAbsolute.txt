@@ -144,3 +144,4 @@ C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debu
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\GrandHotel.RazorTargetAssemblyInfo.cs
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\GrandHotel.Views.pdb
 C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\GrandHotel.csproj.CopyComplete
+C:\Users\armelle.youmbi\Documents\Grand-Hotel-Git\GrandHotel\GrandHotel\obj\Debug\netcoreapp2.1\Razor\Pages\Contacts\ContactUs.g.cshtml.cs
