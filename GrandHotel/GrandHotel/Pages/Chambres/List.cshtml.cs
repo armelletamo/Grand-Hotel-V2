@@ -18,7 +18,6 @@ namespace GrandHotel.Pages.Chambres
         public PaginatedList<Chambre> Chambres { get; set; }
 
         public IEnumerable<Chambre> Chambre;
-       // PaginatedList<Chambre> PageListChambre;
 
         public IActionResult OnGet(int? pageNumber)
         {
